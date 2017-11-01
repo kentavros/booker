@@ -41,7 +41,8 @@ class Users extends RestServer
     {
         try
         {
-            dump($param);
+            $result = $this->model->addUser($param);
+            return $this->response->serverSuccess(200, $result);
 
         }
         catch (Exception $exception)

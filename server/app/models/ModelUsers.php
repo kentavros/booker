@@ -60,6 +60,32 @@ class ModelUsers extends ModelDB
         return $data;
     }
 
+    public function addUser($param)
+    {
+        if ($this->checkData($param) == 'admin')
+        {
+            $validate = $this->validator->isValidateRegistration($param);
+            if ($validate === true)
+            {
+                $id_role = $this->pdo->quote($param['id_role']);
+                $login = $this->pdo->quote($param['login']);
+                $pass = md5(md5(trim($param['pass'])));
+                $pass = $this->pdo->quote($pass);
+                $email = $this->pdo->quote($param['email']);
+                $sql = 'INSERT INTO users (id_role, login, pass, email) VALUES ('.$id_role.', '.$login.', '.$pass.', '.$email.')';
+//                dump($sql);
+                $result = $this->execQuery($sql);
+                if ($result === false)
+                {
+                    return ERR_LOGIN;
+                }
+                return $result;
+            }
+            return $validate;
+        }
+        return ERR_ACCESS;
+    }
+
     public function loginUser($param)
     {
         if (!empty($param['login']) && !empty($param['pass']))
