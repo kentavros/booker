@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 01 2017 г., 05:06
+-- Время создания: Ноя 01 2017 г., 16:45
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.5.38
 
@@ -87,6 +87,7 @@ CREATE TABLE `users` (
   `id_role` int(11) NOT NULL DEFAULT '1',
   `login` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `hash` varchar(255) NOT NULL DEFAULT 'first_hash'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -94,8 +95,8 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `id_role`, `login`, `pass`, `hash`) VALUES
-(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '6b50b565f2d1e458188222a68ca686aa');
+INSERT INTO `users` (`id`, `id_role`, `login`, `pass`, `email`, `hash`) VALUES
+(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '', 'f609d665b01d3de371c869403945e186');
 
 --
 -- Индексы сохранённых таблиц
@@ -127,6 +128,7 @@ ALTER TABLE `rooms`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `login` (`login`),
+  ADD UNIQUE KEY `email` (`email`),
   ADD KEY `users_fk0` (`id_role`);
 
 --
