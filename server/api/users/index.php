@@ -21,6 +21,20 @@ class Users extends RestServer
     {
         try
         {
+            $result = $this->model->checkUser($param);
+            $result = $this->encodedData($result);
+            return $this->response->serverSuccess(200, $result);
+        }
+        catch (Exception $exception)
+        {
+            return $this->response->serverError(500, $exception->getMessage());
+        }
+    }
+
+    public function postUsers($param)
+    {
+        try
+        {
             dump($param);
             exit();
         }
@@ -29,6 +43,34 @@ class Users extends RestServer
             return $this->response->serverError(500, $exception->getMessage());
         }
     }
+
+    public function putUsers($param)
+    {
+        try
+        {
+            $result = $this->model->loginUser($param);
+            $result = $this->encodedData($result);
+            return $this->response->serverSuccess(200, $result);
+        }
+        catch (Exception $exception)
+        {
+            return $this->response->serverError(500, $exception->getMessage());
+        }
+    }
+
+    public function deleteUsers($param)
+    {
+        try
+        {
+            dump($param);
+            exit();
+        }
+        catch (Exception $exception)
+        {
+            return $this->response->serverError(500, $exception->getMessage());
+        }
+    }
+
 
 //    public function getBooks($param=false)
 //    {

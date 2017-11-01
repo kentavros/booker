@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 01 2017 г., 00:56
+-- Время создания: Ноя 01 2017 г., 05:06
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.5.38
 
@@ -95,7 +95,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `id_role`, `login`, `pass`, `hash`) VALUES
-(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'first_hash');
+(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '6b50b565f2d1e458188222a68ca686aa');
 
 --
 -- Индексы сохранённых таблиц
@@ -126,6 +126,7 @@ ALTER TABLE `rooms`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`),
   ADD KEY `users_fk0` (`id_role`);
 
 --
@@ -160,8 +161,8 @@ ALTER TABLE `users`
 -- Ограничения внешнего ключа таблицы `events`
 --
 ALTER TABLE `events`
-  ADD CONSTRAINT `events_fk1` FOREIGN KEY (`id_room`) REFERENCES `rooms` (`id`),
-  ADD CONSTRAINT `events_fk0` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `events_fk0` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `events_fk1` FOREIGN KEY (`id_room`) REFERENCES `rooms` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `users`
