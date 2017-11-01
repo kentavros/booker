@@ -1,12 +1,53 @@
 <?php
 class ModelUsers extends ModelDB
 {
+    public function getUsers($param)
+    {
+        if ($this->checkData($param) == 'admin')
+        {
+           unset($param['hash'], $param['id_user']);
+            $sql = 'SELECT'
+                .' u.id,'
+                .' r.name as role,'
+                .' u.login,'
+                .' u.email'
+                .' FROM users u'
+                .' LEFT JOIN roles r'
+                .' ON u.id_role=r.id';
+            if (!empty($param))
+            {
+                if (is_array($param))
+                {
+                    $sql .= " WHERE ";
+                    foreach ($param as $key => $val)
+                    {
+                        $sql .= 'u.'.$key.'='.$this->pdo->quote($val).' AND ';
+                    }
+                    $sql = substr($sql, 0, -5);
+                }
+                $sql .= ' ORDER BY u.id';
+            }
+            else
+            {
+                $sql .= ' ORDER BY u.id';
+            }
+            $data = $this->selectQuery($sql);
+            return $data;
+        }
+        else
+        {
+            return ERR_ACCESS;
+        } 
+    }
+
+
     public function checkUser($param)
     {
         if (empty($param['id']))
         {
             return ERR_DATA;
         }
+       
         $id = $this->pdo->quote($param['id']);
         $sql = 'SELECT u.hash,'
             .' u.login,'

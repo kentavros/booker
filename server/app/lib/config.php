@@ -26,7 +26,7 @@ define('ERR_AUTH', 'Error, check password and login');
 //define('NO_ACTIVE', 'Your account has been deactivated, contact the site administration!');
 //define('ERR_COUNT', 'You did not specify the count of the desired book!');
 define('ERR_DATA', 'Error, Missing data!');
-//define('ERR_ACCESS', 'Access denied!');
+define('ERR_ACCESS', 'Access denied!');
 //define('AUTHOR_EXIST', 'Author exists!');
 //define('ERR_DISC', 'Field "discount" should be float or integer');
 //define('ERR_PRICE', 'Field "pricet" should be float or integer and not "0"');
