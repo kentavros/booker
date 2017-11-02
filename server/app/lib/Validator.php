@@ -26,6 +26,31 @@ class Validator
         return ERR_FIELDS;
     }
 
+    public function isValidateEdit($param)
+    {
+        if (!empty($param['username']) && !empty($param['email']) && !empty($param['role']))
+        {
+            if ($this->isUserName($param['username']))
+            {
+                    if ($this->isEmail($param['email']))
+                    {
+                        if (isset($param['pass']))
+                        {
+                            if ($this->isPass($param['pass']))
+                            {
+                                return true;
+                            }
+                            return INVAL_PASS;
+                        }
+                        return true;
+                    }
+                    return INVAL_EMAIL;
+            }
+            return INVAL_USERNAME;
+        }
+        return ERR_FIELDS;
+    }
+
     private function isUserName($userName)
     {
         if (strlen($userName) > 3 || strlen($userName) < 35)
@@ -39,7 +64,7 @@ class Validator
     {
         if (preg_match("/^[a-zA-Z0-9]{3,30}+$/",$login))
         {
-                return true;
+            return true;
         }
         return false;
     }
@@ -57,7 +82,7 @@ class Validator
     {
         if (preg_match("/^[a-zA-Z0-9]{4,20}+$/",$pass))
         {
-                return true;
+            return true;
         }
         return false;
     }

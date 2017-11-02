@@ -55,7 +55,7 @@ class Users extends RestServer
     {
         try
         {
-            if (isset($param['hash']) && isset($param['id_client']))
+            if (isset($param['hash']) && isset($param['id_user']))
             {
                 $result = $this->model->editUser($param);
                 $result = $this->encodedData($result);

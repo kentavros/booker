@@ -5,10 +5,11 @@ class ModelUsers extends ModelDB
     {
         if ($this->checkData($param) == 'admin')
         {
-           unset($param['hash'], $param['id_user']);
+            unset($param['hash'], $param['id_user']);
             $sql = 'SELECT'
                 .' u.id,'
                 .' r.name as role,'
+                .' u.id_role,'
                 .' u.login,'
                 .' u.email,'
                 .' u.username'
@@ -48,7 +49,7 @@ class ModelUsers extends ModelDB
         {
             return ERR_DATA;
         }
-       
+
         $id = $this->pdo->quote($param['id']);
         $sql = 'SELECT u.hash,'
             .' u.login,'
@@ -89,12 +90,33 @@ class ModelUsers extends ModelDB
     }
 
     public function editUser($param)
-    {
-        dump($param);
+    { 
         if ($this->checkData($param) == 'admin')
         {
-
+            //dump($param); 
+            $validate = $this->validator->isValidateEdit($param);
+            if ($validate === true)
+            {
+                $id = $this->pdo->quote($param['id']);
+                $userName = $this->pdo->quote($param['username']);
+                $role = $this->pdo->quote($param['role']);
+                $email = $this->pdo->quote($param['email']);
+                $sql = 'UPDATE users SET'
+                    .' username='.$userName.','
+                    .' id_role='.$role.','
+                    .' email='.$email;
+                if(isset($param['pass']))
+                {
+                    $pass = md5(md5(trim($param['pass'])));
+                    $pass = $this->pdo->quote($pass);
+                    $sql .=', pass='.$pass; 
+                }
+                $sql .=' WHERE id='.$id;
+                $data = $this->execQuery($sql);
+                return $data;
+            }
         }
+        return ERR_ACCESS;
     }
 
     public function loginUser($param)
@@ -172,16 +194,16 @@ class ModelUsers extends ModelDB
                 //Check that the admin is not alone
                 $sql = 'SELECT count(id_role) as sum FROM users WHERE id_role=2';
                 $data = $this->selectQuery($sql);
-               if ($data[0]['sum'] > 1)
-               {
-                   // not alone - delete!
-                   $id = $this->pdo->quote($param['id']);
-                   $sql = 'DELETE FROM users WHERE id='.$id;
-                   $result = $this->execQuery($sql);
-                   return $result;
-               }
-               //alone - no delete
-               return ERR_A_DEL;
+                if ($data[0]['sum'] > 1)
+                {
+                    // not alone - delete!
+                    $id = $this->pdo->quote($param['id']);
+                    $sql = 'DELETE FROM users WHERE id='.$id;
+                    $result = $this->execQuery($sql);
+                    return $result;
+                }
+                //alone - no delete
+                return ERR_A_DEL;
             }
 
         }
