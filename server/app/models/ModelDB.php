@@ -47,7 +47,6 @@ class ModelDB
             $hash = $this->pdo->quote($param['hash']);
             $id = $this->pdo->quote($param['id_user']);
             $sql = 'SELECT r.name as role FROM users u LEFT JOIN roles r ON u.id_role=r.id WHERE u.id='.$id.' AND u.hash='.$hash;
-            //$sql = "SELECT role FROM clients WHERE id=".$id." AND hash=".$hash;
             $data = $this->selectQuery($sql);
             if (is_array($data))
             {

@@ -69,7 +69,8 @@ class Users extends RestServer
     {
         try
         {
-            dump($param);
+            $result = $this->model->deleteUser($param);
+            return $this->response->serverSuccess(200, $result);
 
         }
         catch (Exception $exception)

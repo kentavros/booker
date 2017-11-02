@@ -30,6 +30,7 @@ define('ERR_AUTH', 'Error, check password and login');
 //define('ERR_COUNT', 'You did not specify the count of the desired book!');
 define('ERR_DATA', 'Error, Missing data!');
 define('ERR_ACCESS', 'Access denied!');
+define('ERR_A_DEL', 'Error, there must be at least one user with the role of admin!');
 //define('AUTHOR_EXIST', 'Author exists!');
 //define('ERR_DISC', 'Field "discount" should be float or integer');
 //define('ERR_PRICE', 'Field "pricet" should be float or integer and not "0"');

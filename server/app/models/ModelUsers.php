@@ -73,7 +73,6 @@ class ModelUsers extends ModelDB
                 $pass = $this->pdo->quote($pass);
                 $email = $this->pdo->quote($param['email']);
                 $sql = 'INSERT INTO users (id_role, login, pass, email) VALUES ('.$id_role.', '.$login.', '.$pass.', '.$email.')';
-//                dump($sql);
                 $result = $this->execQuery($sql);
                 if ($result === false)
                 {
@@ -138,6 +137,55 @@ class ModelUsers extends ModelDB
         {
             return ERR_FIELDS;
         }
+    }
+
+    public function deleteUser($param)
+    {
+        if ($this->checkData($param) == 'admin')
+        {
+            //check with what role the user being deleted
+            if ($this->getRole($param['id']) == 'user')
+            {
+                $id = $this->pdo->quote($param['id']);
+                //Delete future events
+                $sql = 'DELETE FROM events WHERE id_user='.$id.' AND time_start > NOW()';
+                $this->execQuery($sql);
+                //Delete User
+                $sql = 'DELETE FROM users WHERE id='.$id;
+                $result = $this->execQuery($sql);
+                return $result;
+            }
+            else
+            {
+                //Check that the admin is not alone
+                $sql = 'SELECT count(id_role) as sum FROM users WHERE id_role=2';
+                $data = $this->selectQuery($sql);
+               if ($data[0]['sum'] > 1)
+               {
+                   // not alone - delete!
+                   $id = $this->pdo->quote($param['id']);
+                   $sql = 'DELETE FROM users WHERE id='.$id;
+                   $result = $this->execQuery($sql);
+                   return $result;
+               }
+               //alone - no delete
+               return ERR_A_DEL;
+            }
+
+        }
+        return ERR_ACCESS;
+    }
+
+    private function getRole($id)
+    {
+        $id = $this->pdo->quote($id);
+        $sql = 'SELECT r.name as role FROM users u LEFT JOIN roles r ON u.id_role=r.id WHERE u.id='.$id;
+        $data = $this->selectQuery($sql);
+        if (is_array($data))
+        {
+            return $data[0]['role'];
+        }
+        return false;
     }
 
     /**

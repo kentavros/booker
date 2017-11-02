@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 01 2017 г., 16:45
+-- Время создания: Ноя 02 2017 г., 12:32
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.5.38
 
@@ -31,8 +31,8 @@ CREATE TABLE `events` (
   `id_user` int(11) NOT NULL,
   `id_room` int(11) NOT NULL,
   `description` text NOT NULL,
-  `time_start` datetime NOT NULL,
-  `time_end` datetime NOT NULL,
+  `time_start` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `time_end` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `id_parent` int(11) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -96,7 +96,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `id_role`, `login`, `pass`, `email`, `hash`) VALUES
-(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '', 'f609d665b01d3de371c869403945e186');
+(1, 2, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'admin@email.com', '34edfd33284642e899784b4746a75310'),
+(3, 1, 'test', '14e1b600b1fd579f47433b88e8d85291', 'test@email.ru', 'first_hash'),
+(4, 1, 'test2', '2f7b52aacfbf6f44e13d27656ecb1f59', 'test2@email.com', 'first_hash'),
+(5, 1, 'test3', 'ec6a6536ca304edf844d1d248a4f08dc', 'test3@email.com', 'first_hash');
 
 --
 -- Индексы сохранённых таблиц
@@ -154,7 +157,7 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
