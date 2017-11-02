@@ -10,7 +10,8 @@ class ModelUsers extends ModelDB
                 .' u.id,'
                 .' r.name as role,'
                 .' u.login,'
-                .' u.email'
+                .' u.email,'
+                .' u.username'
                 .' FROM users u'
                 .' LEFT JOIN roles r'
                 .' ON u.id_role=r.id';
@@ -51,6 +52,7 @@ class ModelUsers extends ModelDB
         $id = $this->pdo->quote($param['id']);
         $sql = 'SELECT u.hash,'
             .' u.login,'
+            .' u.username,'
             .' r.name as role'
             .' FROM users u'
             .' LEFT JOIN roles r'
@@ -67,12 +69,13 @@ class ModelUsers extends ModelDB
             $validate = $this->validator->isValidateRegistration($param);
             if ($validate === true)
             {
+                $userName = $this->pdo->quote($param['username']);
                 $id_role = $this->pdo->quote($param['id_role']);
                 $login = $this->pdo->quote($param['login']);
                 $pass = md5(md5(trim($param['pass'])));
                 $pass = $this->pdo->quote($pass);
                 $email = $this->pdo->quote($param['email']);
-                $sql = 'INSERT INTO users (id_role, login, pass, email) VALUES ('.$id_role.', '.$login.', '.$pass.', '.$email.')';
+                $sql = 'INSERT INTO users (id_role, login, pass, username, email) VALUES ('.$id_role.', '.$login.', '.$pass.', '.$userName.', '.$email.')';
                 $result = $this->execQuery($sql);
                 if ($result === false)
                 {
@@ -83,6 +86,15 @@ class ModelUsers extends ModelDB
             return $validate;
         }
         return ERR_ACCESS;
+    }
+
+    public function editUser($param)
+    {
+        dump($param);
+        if ($this->checkData($param) == 'admin')
+        {
+
+        }
     }
 
     public function loginUser($param)

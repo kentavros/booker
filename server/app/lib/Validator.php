@@ -3,23 +3,36 @@ class Validator
 {
     public function isValidateRegistration($param)
     {
-        if (!empty($param['login']) && !empty($param['email']) && !empty($param['pass']) && !empty($param['id_role']))
+        if (!empty($param['username']) && !empty($param['login']) && !empty($param['email']) && !empty($param['pass']) && !empty($param['id_role']))
         {
-            if ($this->isLogin($param['login']))
+            if ($this->isUserName($param['username']))
             {
-                if ($this->isEmail($param['email']))
+                if ($this->isLogin($param['login']))
                 {
-                    if ($this->isPass($param['pass']))
+                    if ($this->isEmail($param['email']))
                     {
-                        return true;
+                        if ($this->isPass($param['pass']))
+                        {
+                            return true;
+                        }
+                        return INVAL_PASS;
                     }
-                    return INVAL_PASS;
+                    return INVAL_EMAIL;
                 }
-                return INVAL_EMAIL;
+                return INVAL_LOGIN;
             }
-            return INVAL_LOGIN;
+            return INVAL_USERNAME;
         }
         return ERR_FIELDS;
+    }
+
+    private function isUserName($userName)
+    {
+        if (strlen($userName) > 3 || strlen($userName) < 35)
+        {
+            return true;
+        }
+        return false;
     }
 
     private function isLogin($login)
