@@ -1,6 +1,6 @@
 <?php
 include '../../app/lib/function.php';
-class Rooms extends RestServer
+class Events extends RestServer
 {
     private $model;
     private $response;
@@ -8,20 +8,20 @@ class Rooms extends RestServer
     /**
      * create obj - model & response
      * parent run method
-     * Rooms constructor.
+     * Events constructor.
      */
     public function __construct()
     {
-        $this->model = new ModelRooms();
+        $this->model = new ModelEvents();
         $this->response = new Response();
         $this->run();
     }
 
-    public function getRooms($param)
+    public function getEvents($param)
     {
         try
         {
-            $result = $this->model->getRooms($param);
+            $result = $this->model->getEvents($param);
             $result = $this->encodedData($result);
             return $this->response->serverSuccess(200, $result);
         }
@@ -31,4 +31,4 @@ class Rooms extends RestServer
         }
     }
 }
-$rooms = new Rooms();
+$events = new Events();

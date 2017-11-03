@@ -3,27 +3,29 @@ class ModelRooms extends ModelDB
 {
     public function getRooms($param)
     {
-        $sql = 'SELECT id, name FROM rooms';
-        if ($param != false)
+        if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user' )
         {
-            if (is_array($param))
-            {
-                $sql .= " WHERE ";
-                foreach ($param as $key => $val)
-                {
-                    $sql .= $key.'='.$this->pdo->quote($val).' AND ';
+            unset($param['hash'], $param['id_user']);
+            $sql = 'SELECT id, name FROM rooms';
+            if ($param != false) {
+                if (is_array($param)) {
+                    $sql .= " WHERE ";
+                    foreach ($param as $key => $val) {
+                        $sql .= $key . '=' . $this->pdo->quote($val) . ' AND ';
+                    }
+                    $sql = substr($sql, 0, -5);
                 }
-                $sql = substr($sql, 0, -5);
+                $sql .= ' ORDER BY id';
+            } else {
+                $sql .= ' ORDER BY id';
             }
-            $sql .= ' ORDER BY id';
+            $data = $this->selectQuery($sql);
+            return $data;
         }
         else
         {
-            $sql .= ' ORDER BY id';
+            return ERR_ACCESS;
         }
-        $data = $this->selectQuery($sql);
-        return $data;
-
     }
 
 }
