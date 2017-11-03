@@ -1,7 +1,2 @@
 add to classs
 
-1) ALTER TABLE `events` CHANGE `time_start` `time_end` TIMESTAMP NOT NULL DEFAULT 0;
-2) ALTER TABLE `events` CHANGE `time_end` `time_end` TIMESTAMP NOT NULL DEFAULT 0;
-3) ALTER TABLE `events` CHANGE `id_parent` `id_parent` INT(11) NULL DEFAULT NULL;
-4) ALTER TABLE `events` DROP FOREIGN KEY `events_fk0`;
-5) ALTER TABLE `users` ADD `username` VARCHAR(255) NOT NULL AFTER `pass`;

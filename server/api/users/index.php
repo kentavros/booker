@@ -6,7 +6,7 @@ class Users extends RestServer
     private $response;
 
     /**
-     * create obj - model, validator & response
+     * create obj - model & response
      * parent run method
      * Users constructor.
      */
@@ -17,19 +17,13 @@ class Users extends RestServer
         $this->run();
     }
 
-    public function getUsers($param = false)
+    public function getUsers($param)
     {
         try
         {
-            if (isset($param['hash']) && isset($param['id_user']))
-            {
                 $result = $this->model->getUsers($param);
                 $result = $this->encodedData($result);
                 return $this->response->serverSuccess(200, $result);
-            }
-            $result = $this->model->checkUser($param);
-            $result = $this->encodedData($result);
-            return $this->response->serverSuccess(200, $result);
         }
         catch (Exception $exception)
         {

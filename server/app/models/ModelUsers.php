@@ -12,6 +12,7 @@ class ModelUsers extends ModelDB
                 .' u.id_role,'
                 .' u.login,'
                 .' u.email,'
+                .' u.hash,'
                 .' u.username'
                 .' FROM users u'
                 .' LEFT JOIN roles r'
@@ -36,32 +37,46 @@ class ModelUsers extends ModelDB
             $data = $this->selectQuery($sql);
             return $data;
         }
+        //USER
+        else if ($this->checkData($param) == 'user')
+        {
+            unset($param['hash'], $param['id_user']);
+            $sql = 'SELECT'
+                .' u.id,'
+                .' r.name as role,'
+                .' u.id_role,'
+                .' u.login,'
+                .' u.email,'
+                .' u.hash,'
+                .' u.username'
+                .' FROM users u'
+                .' LEFT JOIN roles r'
+                .' ON u.id_role=r.id';
+            if (!empty($param))
+            {
+                if (is_array($param))
+                {
+                    $sql .= " WHERE ";
+                    foreach ($param as $key => $val)
+                    {
+                        $sql .= 'u.'.$key.'='.$this->pdo->quote($val).' AND ';
+                    }
+                    $sql = substr($sql, 0, -5);
+                    $data = $this->selectQuery($sql);
+                    return $data;
+                }
+            }
+            else
+            {
+                return ERR_DATA;
+            }
+        }
         else
         {
             return ERR_ACCESS;
-        } 
-    }
-
-
-    public function checkUser($param)
-    {
-        if (empty($param['id']))
-        {
-            return ERR_DATA;
         }
-
-        $id = $this->pdo->quote($param['id']);
-        $sql = 'SELECT u.hash,'
-            .' u.login,'
-            .' u.username,'
-            .' r.name as role'
-            .' FROM users u'
-            .' LEFT JOIN roles r'
-            .' ON u.id_role=r.id'
-            .' WHERE u.id='.$id;
-        $data = $this->selectQuery($sql);
-        return $data;
     }
+
 
     public function addUser($param)
     {
@@ -129,6 +144,7 @@ class ModelUsers extends ModelDB
             $role = '';
             $sql = 'SELECT u.id,'
                 .' r.name as role,'
+                .' u.username,'
                 .' u.pass'
                 .' FROM users u'
                 .' LEFT JOIN roles r'
@@ -146,6 +162,7 @@ class ModelUsers extends ModelDB
                     else
                     {
                         $id = $this->pdo->quote($val['id']);
+                        $userName = $val['username'];
                         $role = $val['role'];
                     }
                 }
@@ -164,7 +181,7 @@ class ModelUsers extends ModelDB
             $id = trim($id, "'");
             $hash = trim($hash, "'");
             $login = trim($login, "'");
-            $arrRes = ['id'=>$id, 'login'=>$login, 'hash'=>$hash, 'role'=>$role];
+            $arrRes = ['id'=>$id, 'login'=>$login, 'hash'=>$hash, 'username'=>$userName, 'role'=>$role];
             return $arrRes;
         }
         else
