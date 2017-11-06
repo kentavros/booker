@@ -3,7 +3,7 @@ class ModelEvents extends ModelDB
 {
     public function getEvents($param)
     {
-
+        //SELECT * FROM `events` WHERE id=81 OR id_parent=81 AND time_start > NOW()
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
             unset($param['hash'], $param['id_user']);
@@ -37,21 +37,28 @@ class ModelEvents extends ModelDB
                 $data = $this->selectQuery($sql);
                 return $data;
             }
-            //get request by params
-            if (!empty($param)) {
-                if (is_array($param)) {
-                    $sql .= " WHERE ";
-                    foreach ($param as $key => $val) {
-                        $sql .= 'e.' . $key . '=' . $this->pdo->quote($val) . ' AND ';
-                    }
-                    $sql = substr($sql, 0, -5);
-                }
-                $sql .= ' ORDER BY e.id';
-            } else {
-                $sql .= ' ORDER BY e.id';
+            //get paren event by future time
+            if (isset($param['flag']) && $param['flag'] === 'parent')
+            {
+                dump($param);
             }
-            $data = $this->selectQuery($sql);
-            return $data;
+
+
+            //get request by params
+//            if (!empty($param)) {
+//                if (is_array($param)) {
+//                    $sql .= " WHERE ";
+//                    foreach ($param as $key => $val) {
+//                        $sql .= 'e.' . $key . '=' . $this->pdo->quote($val) . ' AND ';
+//                    }
+//                    $sql = substr($sql, 0, -5);
+//                }
+//                $sql .= ' ORDER BY e.id';
+//            } else {
+//                $sql .= ' ORDER BY e.id';
+//            }
+//            $data = $this->selectQuery($sql);
+//            return $data;
         }
         else
         {
