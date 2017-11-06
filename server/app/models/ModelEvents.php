@@ -6,6 +6,7 @@ class ModelEvents extends ModelDB
         //SELECT * FROM `events` WHERE id=81 OR id_parent=81 AND time_start > NOW()
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
+            
             unset($param['hash'], $param['id_user']);
             $sql = 'SELECT '
                 . ' e.id,'
@@ -38,10 +39,16 @@ class ModelEvents extends ModelDB
                 return $data;
             }
             //get paren event by future time
-            if (isset($param['flag']) && $param['flag'] === 'parent')
+            else if (isset($param['flag']) && $param['flag'] === 'parent')
             {
-                dump($param);
+                unset($param['flag']);
+                $idEvent = $this->pdo->quote($param['id']);
+                $sql .= ' WHERE (e.id='.$idEvent.' OR e.id_parent='.$idEvent.') AND e.time_start > NOW()';
+               // dump($sql);
+                $data = $this->selectQuery($sql);
+                return $data;
             }
+          
 
 
             //get request by params
