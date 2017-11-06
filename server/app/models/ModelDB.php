@@ -62,4 +62,39 @@ class ModelDB
             return false;
         }
     }
+
+    protected function checkEvent($param)
+    {
+        $dateStart = new DateTime();
+        $dateEnd = new DateTime();
+        $dateStart->setTimestamp($param['dateTimeStart']/1000);
+        $dateEnd->setTimestamp($param['dateTimeEnd']/1000);
+        $day = $dateStart->format('Y-m-d');
+        $day = $this->pdo->quote($day.'%');
+        $idRoom = $this->pdo->quote($param['id_room']);
+        $sql = 'SELECT '
+            .' time_start,'
+            .' time_end'
+            .' FROM events'
+            .' WHERE'
+            .' time_start'
+            .' LIKE'
+            .' '.$day
+            .' AND id_room ='.$idRoom;
+        $data = $this->selectQuery($sql);
+
+        if (!is_array($data))
+        {
+            return true;
+        }
+        foreach ($data as $val)
+        {
+            if (!((new DateTime($val['time_start']) < $dateStart && new DateTime($val['time_end']) <= $dateStart)
+                || ($dateEnd <= new DateTime($val['time_start']) && $dateEnd < new DateTime($val['time_end']))))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

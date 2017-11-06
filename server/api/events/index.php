@@ -30,5 +30,20 @@ class Events extends RestServer
             return $this->response->serverError(500, $exception->getMessage());
         }
     }
+
+    public function postEvents($param)
+    {
+        try
+        {
+            $result = $this->model->addEvents($param);
+            $result = $this->encodedData($result);
+            return $this->response->serverSuccess(200, $result);
+        }
+        catch (Exception $exception)
+        {
+            return $this->response->serverError(500, $exception->getMessage());
+        }
+    }
+
 }
 $events = new Events();
