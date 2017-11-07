@@ -200,9 +200,43 @@ class ModelEvents extends ModelDB
 
     public function editEvent($param)
     {
-        $dateStart = new DateTime();
-        $dateStart->setTimestamp($param['dateTimeStart']/1000);
-        $dateTime = $dateStart->format(TIME_FORMAT);
-        dump($dateTime);
+//        $dateStart = new DateTime();
+//        $dateStart->setTimestamp($param['dateTimeStart']/1000);
+//        $dateTime = $dateStart->format(TIME_FORMAT);
+//        dump($dateTime);
+        if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
+        {
+            $validate = $this->validator->isValidEventAdd($param);
+            if ($validate === true)
+            {
+                //if true - update
+                if ($this->checkEvent($param) === true)
+                {
+                    $idEvent = $this->pdo->quote($param['event_id']);
+                    $bookedFor = $this->pdo->quote($param['booked_for']);
+                    $dateStart = new DateTime();
+                    $dateStart->setTimestamp($param['dateTimeStart']/1000);
+                    $dateS = $this->pdo->quote($dateStart->format(TIME_FORMAT));
+                    $dateEnd = new DateTime();
+                    $dateEnd->setTimestamp($param['dateTimeEnd']/1000);
+                    $dateE = $this->pdo->quote($dateEnd->format(TIME_FORMAT));
+                    $description = $this->pdo->quote($param['description']);
+                    $sql = 'UPDATE events SET '
+                        .' id_user='.$bookedFor.','
+                        .' time_start='.$dateS.','
+                        .' time_end='.$dateE.','
+                        .' description='.$description.','
+                        .' create_time=CURRENT_TIMESTAMP'
+                        .' WHERE id='.$idEvent;
+                    dump($sql);
+                }
+                return ERR_ADDEVENT;
+            }
+            return $validate;
+        }
+        else
+        {
+            return ERR_ACCESS;
+        }
     }
 }

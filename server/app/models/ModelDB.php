@@ -65,6 +65,7 @@ class ModelDB
 
     protected function checkEvent($param)
     {
+        //IF Add
         $dateStart = new DateTime();
         $dateEnd = new DateTime();
         $dateStart->setTimestamp($param['dateTimeStart']/1000);
@@ -81,6 +82,13 @@ class ModelDB
             .' LIKE'
             .' '.$day
             .' AND id_room ='.$idRoom;
+        //IF update
+        if (!empty($param['event_id']))
+        {
+            $idEvent = $this->pdo->quote($param['event_id']);
+            $sql .= ' AND id !='.$idEvent;
+        }
+
         $data = $this->selectQuery($sql);
 
         if (!is_array($data))
