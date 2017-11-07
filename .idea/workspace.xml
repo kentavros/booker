@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd3b08c6-dccb-4aac-859a-11835569902e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelDB.php" afterPath="$PROJECT_DIR$/server/app/models/ModelDB.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/api/.htaccess" afterPath="$PROJECT_DIR$/client/api/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/events/.htaccess" afterPath="$PROJECT_DIR$/server/api/events/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/rooms/.htaccess" afterPath="$PROJECT_DIR$/server/api/rooms/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/users/.htaccess" afterPath="$PROJECT_DIR$/server/api/users/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelEvents.php" afterPath="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,96 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModelEvents.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="230" column="31" lean-forward="true" selection-start-line="230" selection-start-column="31" selection-end-line="230" selection-end-column="31" />
-              <folding>
-                <marker date="1510056532310" expanded="true" signature="2853:3036" ph="INSERT INTO events... " />
-                <marker date="1510056532310" expanded="true" signature="4799:5014" ph="INSERT INTO events... " />
-                <marker date="1510056532310" expanded="true" signature="6335:6363" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="6728:6756" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="6728:6777" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="6728:6778" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="7092:7142" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="7092:7174" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="7092:7175" ph="DELETE FROM " />
-                <marker date="1510056532310" expanded="true" signature="8486:8503" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8536" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8541" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8556" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8557" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8596" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8607" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8608" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8645" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8646" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8656" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8657" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8697" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8698" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8806" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8810" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8811" ph="UPDATE event... " />
-                <marker date="1510056532310" expanded="true" signature="8486:8907" ph="UPDATE event... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Validator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/lib/Validator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-193">
-              <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="87" column="61" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="61" />
-              <folding>
-                <marker date="1510055220242" expanded="true" signature="1118:1219" ph="SELECT r.nam... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelUsers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/models/ModelUsers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1263">
-              <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="219" selection-end-column="35" />
-              <folding>
-                <marker date="1509684050811" expanded="true" signature="2887:3016" ph="INSERT INTO users... " />
-                <marker date="1509684050811" expanded="true" signature="5644:5685" ph="UPDATE users... " />
-                <marker date="1509684050811" expanded="true" signature="6509:6572" ph="DELETE FROM " />
-                <marker date="1509684050811" expanded="true" signature="6669:6696" ph="DELETE FROM " />
-                <marker date="1509684050811" expanded="true" signature="6906:6961" ph="SELECT count... " />
-                <marker date="1509684050811" expanded="true" signature="7203:7230" ph="DELETE FROM " />
-                <marker date="1509684050811" expanded="true" signature="7568:7650" ph="SELECT r.nam... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/events/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -128,13 +41,13 @@
         <option value="$PROJECT_DIR$/server/app/models/ModelUsers.php" />
         <option value="$PROJECT_DIR$/server/app/lib/Validator.php" />
         <option value="$PROJECT_DIR$/server/app/lib/config.php" />
+        <option value="$PROJECT_DIR$/server/api/events/index.php" />
+        <option value="$PROJECT_DIR$/server/app/models/ModelDB.php" />
+        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
         <option value="$PROJECT_DIR$/client/api/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/events/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/rooms/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/users/.htaccess" />
-        <option value="$PROJECT_DIR$/server/api/events/index.php" />
-        <option value="$PROJECT_DIR$/server/app/models/ModelDB.php" />
-        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
       </list>
     </option>
   </component>
@@ -176,112 +89,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,18 +243,17 @@
       <workItem from="1509960563197" duration="1756000" />
       <workItem from="1509999072268" duration="265000" />
       <workItem from="1509999877347" duration="8909000" />
-      <workItem from="1510050479647" duration="4924000" />
+      <workItem from="1510050479647" duration="9331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105322000" />
+    <option name="totallyTimeSpent" value="109729000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -732,6 +538,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -749,34 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/events/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/users/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -785,11 +564,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/events/index.php">
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="254">
+          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+          <folding>
+            <marker date="1510062708823" expanded="true" signature="3032:3215" ph="INSERT INTO events... " />
+            <marker date="1510062708823" expanded="true" signature="4978:5193" ph="INSERT INTO events... " />
+            <marker date="1510062708823" expanded="true" signature="6514:6542" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="6907:6935" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="6907:6956" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="6907:6957" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="7271:7321" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="7271:7353" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="7271:7354" ph="DELETE FROM " />
+            <marker date="1510062708823" expanded="true" signature="8502:8519" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8552" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8557" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8572" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8573" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8612" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8623" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8624" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8661" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8662" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8672" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8673" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8713" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8714" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8822" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8826" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8827" ph="UPDATE event... " />
+            <marker date="1510062708823" expanded="true" signature="8502:8981" ph="UPDATE event... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,6 +605,16 @@
         <state relative-caret-position="-193">
           <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="87" column="61" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="61" />
+          <folding>
+            <marker date="1510055220242" expanded="true" signature="1118:1219" ph="SELECT r.nam... users" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,49 +634,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
+    <entry file="file://$PROJECT_DIR$/server/api/events/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="87" column="61" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="61" />
-          <folding>
-            <marker date="1510055220242" expanded="true" signature="1118:1219" ph="SELECT r.nam... users" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
+    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="230" column="31" lean-forward="true" selection-start-line="230" selection-start-column="31" selection-end-line="230" selection-end-column="31" />
-          <folding>
-            <marker date="1510056532310" expanded="true" signature="2853:3036" ph="INSERT INTO events... " />
-            <marker date="1510056532310" expanded="true" signature="4799:5014" ph="INSERT INTO events... " />
-            <marker date="1510056532310" expanded="true" signature="6335:6363" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="6728:6756" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="6728:6777" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="6728:6778" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="7092:7142" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="7092:7174" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="7092:7175" ph="DELETE FROM " />
-            <marker date="1510056532310" expanded="true" signature="8486:8503" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8536" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8541" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8556" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8557" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8596" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8607" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8608" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8645" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8646" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8656" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8657" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8697" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8698" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8806" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8810" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8811" ph="UPDATE event... " />
-            <marker date="1510056532310" expanded="true" signature="8486:8907" ph="UPDATE event... " />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/events/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

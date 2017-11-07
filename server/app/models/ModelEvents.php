@@ -41,7 +41,10 @@ class ModelEvents extends ModelDB
             {
                 unset($param['flag']);
                 $idEvent = $this->pdo->quote($param['id']);
-                $sql .= ' WHERE (e.id='.$idEvent.' OR e.id_parent='.$idEvent.') AND e.time_start > NOW()';
+                $idUserEvent = $this->pdo->quote($param['event_id_user']);
+                $sql .= ' WHERE (e.id='.$idEvent.' OR e.id_parent='.$idEvent.') AND e.time_start > NOW()'
+                    .' AND e.id_user='.$idUserEvent;
+                //AND WHERE id_user = event.id_user
                // dump($sql);
                 $data = $this->selectQuery($sql);
                 return $data;
@@ -200,10 +203,7 @@ class ModelEvents extends ModelDB
 
     public function editEvent($param)
     {
-//        $dateStart = new DateTime();
-//        $dateStart->setTimestamp($param['dateTimeStart']/1000);
-//        $dateTime = $dateStart->format(TIME_FORMAT);
-//        dump($dateTime);
+//        dump($param);
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
             $validate = $this->validator->isValidEventAdd($param);
@@ -228,7 +228,8 @@ class ModelEvents extends ModelDB
                         .' description='.$description.','
                         .' create_time=CURRENT_TIMESTAMP'
                         .' WHERE id='.$idEvent;
-                    dump($sql);
+                    $result = $this->execQuery($sql);
+                    return $result;
                 }
                 return ERR_ADDEVENT;
             }
