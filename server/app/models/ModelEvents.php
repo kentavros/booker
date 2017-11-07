@@ -45,7 +45,7 @@ class ModelEvents extends ModelDB
                 $sql .= ' WHERE (e.id='.$idEvent.' OR e.id_parent='.$idEvent.') AND e.time_start > NOW()'
                     .' AND e.id_user='.$idUserEvent;
                 //AND WHERE id_user = event.id_user
-               // dump($sql);
+                // dump($sql);
                 $data = $this->selectQuery($sql);
                 return $data;
             }
@@ -72,26 +72,26 @@ class ModelEvents extends ModelDB
                 $dateEnd->setTimestamp($param['dateTimeEnd']/1000);
                 $dateE = $this->pdo->quote($dateEnd->format(TIME_FORMAT));
                 $description = $this->pdo->quote($param['description']);
-                    if($this->checkEvent($param) === true)
+                if($this->checkEvent($param) === true)
+                {
+                    $sql = 'INSERT INTO events (id_user, id_room, description, time_start, time_end)'
+                        .' VALUES ('.$bookedFor.', '.$idRoom.', '.$description.', '.$dateS.', '.$dateE.')';
+                    $result = $this->execQuery($sql);
+                    if (!isset($param['recurringMethod']))
                     {
-                        $sql = 'INSERT INTO events (id_user, id_room, description, time_start, time_end)'
-                            .' VALUES ('.$bookedFor.', '.$idRoom.', '.$description.', '.$dateS.', '.$dateE.')';
-                        $result = $this->execQuery($sql);
-                        if (!isset($param['recurringMethod']))
-                        {
-                            return $result;
-                        }
-                        else
-                        {
-                            $param['id_parent'] = $this->pdo->lastInsertId();
-                            $param['duration'] = (int)$param['duration'];
-                            $result = $this->addRecurringEvent($param, $dateStart, $dateEnd);
-                            return $result;
-                        }
+                        return $result;
                     }
-                    return ERR_ADDEVENT;
+                    else
+                    {
+                        $param['id_parent'] = $this->pdo->lastInsertId();
+                        $param['duration'] = (int)$param['duration'];
+                        $result = $this->addRecurringEvent($param, $dateStart, $dateEnd);
+                        return $result;
+                    }
+                }
+                return ERR_ADDEVENT;
             }
-           return $validate;
+            return $validate;
         }
         else
         {
@@ -143,15 +143,15 @@ class ModelEvents extends ModelDB
         $period = '';
         switch ($recurring)
         {
-            case 'weekly':
-                $period = '+1 week';
-                break;
-            case 'bi-weekly':
-                $period = '+2 week';
-                break;
-            case 'monthly':
-                $period = '+1 month';
-                break;
+        case 'weekly':
+            $period = '+1 week';
+            break;
+        case 'bi-weekly':
+            $period = '+2 week';
+            break;
+        case 'monthly':
+            $period = '+1 month';
+            break;
         }
         return $period;
     }
@@ -164,6 +164,7 @@ class ModelEvents extends ModelDB
         {
             if($param['checked'])
             {
+                //dump($param);
                 $result = $this->deleteRecurringEvents($param);
                 return $result;
             }
@@ -186,7 +187,10 @@ class ModelEvents extends ModelDB
         if ($param['id_parent'] == 'null')
         {
             $id = $this->pdo->quote($param['id']);
-            $sql = 'DELETE FROM events WHERE id='.$id.' OR id_parent='.$id;
+            $idUserEvent = $this->pdo->quote($param['event_id_user']);
+            $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$id.') AND id_user='.$idUserEvent;
+
+            //dump($sql);
             $result = $this->execQuery($sql);
             return $result;
         }
@@ -195,7 +199,10 @@ class ModelEvents extends ModelDB
             $id = $this->pdo->quote($param['id']);
             $idParent = $this->pdo->quote($param['id_parent']);
             $timeStart = $this->pdo->quote($param['time_start']);
-            $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$idParent.') AND time_start >='.$timeStart;
+            $idUserEvent = $this->pdo->quote($param['event_id_user']);
+            $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$idParent.') AND time_start >='.$timeStart
+                .' AND id_user='.$idUserEvent;
+            //dump($sql);
             $result = $this->execQuery($sql);
             return $result;
         }
@@ -203,41 +210,87 @@ class ModelEvents extends ModelDB
 
     public function editEvent($param)
     {
-//        dump($param);
+        //dump($param);
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
-            $validate = $this->validator->isValidEventAdd($param);
-            if ($validate === true)
+            if ($param['checked'])
             {
-                //if true - update
-                if ($this->checkEvent($param) === true)
-                {
-                    $idEvent = $this->pdo->quote($param['event_id']);
-                    $bookedFor = $this->pdo->quote($param['booked_for']);
-                    $dateStart = new DateTime();
-                    $dateStart->setTimestamp($param['dateTimeStart']/1000);
-                    $dateS = $this->pdo->quote($dateStart->format(TIME_FORMAT));
-                    $dateEnd = new DateTime();
-                    $dateEnd->setTimestamp($param['dateTimeEnd']/1000);
-                    $dateE = $this->pdo->quote($dateEnd->format(TIME_FORMAT));
-                    $description = $this->pdo->quote($param['description']);
-                    $sql = 'UPDATE events SET '
-                        .' id_user='.$bookedFor.','
-                        .' time_start='.$dateS.','
-                        .' time_end='.$dateE.','
-                        .' description='.$description.','
-                        .' create_time=CURRENT_TIMESTAMP'
-                        .' WHERE id='.$idEvent;
-                    $result = $this->execQuery($sql);
-                    return $result;
-                }
-                return ERR_ADDEVENT;
+                $result = $this->editRecurringEvents($param['checked']);
+                return $result;
             }
-            return $validate;
+            else
+            {
+                $validate = $this->validator->isValidEventAdd($param);
+                if ($validate === true)
+                {
+                    //if true - update
+                    if ($this->checkEvent($param) === true)
+                    {
+                        $idEvent = $this->pdo->quote($param['event_id']);
+                        $bookedFor = $this->pdo->quote($param['booked_for']);
+                        $dateStart = new DateTime();
+                        $dateStart->setTimestamp($param['dateTimeStart']/1000);
+                        $dateS = $this->pdo->quote($dateStart->format(TIME_FORMAT));
+                        $dateEnd = new DateTime();
+                        $dateEnd->setTimestamp($param['dateTimeEnd']/1000);
+                        $dateE = $this->pdo->quote($dateEnd->format(TIME_FORMAT));
+                        $description = $this->pdo->quote($param['description']);
+                        $sql = 'UPDATE events SET '
+                            .' id_user='.$bookedFor.','
+                            .' time_start='.$dateS.','
+                            .' time_end='.$dateE.','
+                            .' description='.$description.','
+                            .' create_time=CURRENT_TIMESTAMP'
+                            .' WHERE id='.$idEvent;
+                        $result = $this->execQuery($sql);
+                        return $result;
+                    }
+                    return ERR_ADDEVENT;
+                }
+                return $validate;
+            }
         }
         else
         {
             return ERR_ACCESS;
         }
     }
+
+    private function editRecurringEvents($param)
+    {
+        //dump($param);   
+        //VALIDACIA & CIKL!!!!!!!!!
+        $arrErrors = [];
+        //dump($param);
+        if (!is_array($param))
+        {
+            return ERR_DATA; 
+        }
+        for ($i=0; $i<count($param); $i++)
+        {
+            $validate = $this->validator->isValidEventAdd($param[$i]);
+            if ($validate == true)
+            {
+                if ($this->checkEvent($param[$i]) === true)
+                {
+                    //dump($param[$i]);
+                    //$result++;
+                }
+                else
+                {
+                   $arrErrors[]= $i.': false added!'; 
+                } 
+            }
+            else
+            {
+                $arrErrors[] = $i. ' ' . $validate;
+            }
+        }
+        if (count($arrErrors) == 0)
+        {
+            return true;
+        }
+        return $arrErrors;
+    }
+
 }
