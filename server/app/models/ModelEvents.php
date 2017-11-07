@@ -3,10 +3,8 @@ class ModelEvents extends ModelDB
 {
     public function getEvents($param)
     {
-        //SELECT * FROM `events` WHERE id=81 OR id_parent=81 AND time_start > NOW()
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
-            
             unset($param['hash'], $param['id_user']);
             $sql = 'SELECT '
                 . ' e.id,'
@@ -48,24 +46,6 @@ class ModelEvents extends ModelDB
                 $data = $this->selectQuery($sql);
                 return $data;
             }
-          
-
-
-            //get request by params
-//            if (!empty($param)) {
-//                if (is_array($param)) {
-//                    $sql .= " WHERE ";
-//                    foreach ($param as $key => $val) {
-//                        $sql .= 'e.' . $key . '=' . $this->pdo->quote($val) . ' AND ';
-//                    }
-//                    $sql = substr($sql, 0, -5);
-//                }
-//                $sql .= ' ORDER BY e.id';
-//            } else {
-//                $sql .= ' ORDER BY e.id';
-//            }
-//            $data = $this->selectQuery($sql);
-//            return $data;
         }
         else
         {
@@ -171,5 +151,58 @@ class ModelEvents extends ModelDB
                 break;
         }
         return $period;
+    }
+
+
+    public function deleteEvent($param)
+    {
+
+        if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
+        {
+            if($param['checked'])
+            {
+                $result = $this->deleteRecurringEvents($param);
+                return $result;
+            }
+            else
+            {
+                $id = $this->pdo->quote($param['id']);
+                $sql = 'DELETE FROM events WHERE id='.$id;
+                $result = $this->execQuery($sql);
+                return $result;
+            }
+        }
+        else
+        {
+            return ERR_ACCESS;
+        }
+    }
+
+    private function deleteRecurringEvents($param)
+    {
+        if ($param['id_parent'] == 'null')
+        {
+            $id = $this->pdo->quote($param['id']);
+            $sql = 'DELETE FROM events WHERE id='.$id.' OR id_parent='.$id;
+            $result = $this->execQuery($sql);
+            return $result;
+        }
+        else
+        {
+            $id = $this->pdo->quote($param['id']);
+            $idParent = $this->pdo->quote($param['id_parent']);
+            $timeStart = $this->pdo->quote($param['time_start']);
+            $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$idParent.') AND time_start >='.$timeStart;
+            $result = $this->execQuery($sql);
+            return $result;
+        }
+    }
+
+    public function editEvent($param)
+    {
+        $dateStart = new DateTime();
+        $dateStart->setTimestamp($param['dateTimeStart']/1000);
+        $dateTime = $dateStart->format(TIME_FORMAT);
+        dump($dateTime);
     }
 }
