@@ -119,7 +119,7 @@ class ModelEvents extends ModelDB
                 {
                     $sql = 'INSERT INTO events (id_user, id_room, description, time_start, time_end, id_parent)'
                         .' VALUES ('.$bookedFor.', '.$idRoom.', '.$description.', '.$dateS.', '.$dateE.', '.$param['id_parent'].')';
-                    $result = $this->execQuery($sql);
+                    $this->execQuery($sql);
                 }
                 else
                 {
@@ -159,7 +159,6 @@ class ModelEvents extends ModelDB
 
     public function deleteEvent($param)
     {
-
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
             if($param['checked'])
@@ -189,8 +188,6 @@ class ModelEvents extends ModelDB
             $id = $this->pdo->quote($param['id']);
             $idUserEvent = $this->pdo->quote($param['event_id_user']);
             $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$id.') AND id_user='.$idUserEvent;
-
-            //dump($sql);
             $result = $this->execQuery($sql);
             return $result;
         }
@@ -202,7 +199,6 @@ class ModelEvents extends ModelDB
             $idUserEvent = $this->pdo->quote($param['event_id_user']);
             $sql = 'DELETE FROM events WHERE (id='.$id.' OR id_parent='.$idParent.') AND time_start >='.$timeStart
                 .' AND id_user='.$idUserEvent;
-            //dump($sql);
             $result = $this->execQuery($sql);
             return $result;
         }
@@ -210,12 +206,11 @@ class ModelEvents extends ModelDB
 
     public function editEvent($param)
     {
-        //dump($param);
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
             if ($param['checked'])
             {
-                $result = $this->editRecurringEvents($param['checked']);
+                $result = $this->editRecurringEvents($param['checked'], $param['timestamp']);
                 return $result;
             }
             else
@@ -223,7 +218,6 @@ class ModelEvents extends ModelDB
                 $validate = $this->validator->isValidEventAdd($param);
                 if ($validate === true)
                 {
-                    //if true - update
                     if ($this->checkEvent($param) === true)
                     {
                         $idEvent = $this->pdo->quote($param['event_id']);
@@ -256,12 +250,13 @@ class ModelEvents extends ModelDB
         }
     }
 
-    private function editRecurringEvents($param)
+    private function editRecurringEvents($param, $timestamp)
     {
-        //dump($param);   
-        //VALIDACIA & CIKL!!!!!!!!!
+
         $arrErrors = [];
-        //dump($param);
+        $timePoint = new DateTime();
+        $timePoint->setTimestamp($timestamp/1000);
+        $timeP = $this->pdo->quote($timePoint->format(TIME_FORMAT));
         if (!is_array($param))
         {
             return ERR_DATA; 
@@ -271,19 +266,35 @@ class ModelEvents extends ModelDB
             $validate = $this->validator->isValidEventAdd($param[$i]);
             if ($validate == true)
             {
+                $idEvent = $this->pdo->quote($param[$i]['event_id']);
+                $bookedFor = $this->pdo->quote($param[$i]['booked_for']);
+                $dateStart = new DateTime();
+                $dateStart->setTimestamp($param[$i]['dateTimeStart']/1000);
+                $dateS = $this->pdo->quote($dateStart->format(TIME_FORMAT));
+                $dateEnd = new DateTime();
+                $dateEnd->setTimestamp($param[$i]['dateTimeEnd']/1000);
+                $dateE = $this->pdo->quote($dateEnd->format(TIME_FORMAT));
+                $description = $this->pdo->quote($param[$i]['description']);
                 if ($this->checkEvent($param[$i]) === true)
                 {
-                    //dump($param[$i]);
-                    //$result++;
+                    $sql = 'UPDATE events SET '
+                        .' id_user='.$bookedFor.','
+                        .' time_start='.$dateS.','
+                        .' time_end='.$dateE.','
+                        .' description='.$description.','
+                        .' create_time=CURRENT_TIMESTAMP'
+                        .' WHERE id='.$idEvent
+                        .' AND time_start >='.$timeP;
+                    $this->execQuery($sql);
                 }
                 else
                 {
-                   $arrErrors[]= $i.': false added!'; 
+                   $arrErrors[]= 'Date and time is reserved by another user: '.$dateS.' - '.$dateE;;
                 } 
             }
             else
             {
-                $arrErrors[] = $i. ' ' . $validate;
+                $arrErrors[] = $i. '. Error validation: ' . $validate;
             }
         }
         if (count($arrErrors) == 0)

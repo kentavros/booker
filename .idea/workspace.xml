@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd3b08c6-dccb-4aac-859a-11835569902e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/api/.htaccess" afterPath="$PROJECT_DIR$/client/api/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/events/.htaccess" afterPath="$PROJECT_DIR$/server/api/events/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/rooms/.htaccess" afterPath="$PROJECT_DIR$/server/api/rooms/.htaccess" />
@@ -17,12 +18,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>now</find>
       <find>trim</find>
+      <find>The time of the beginning of the event should be less and not exactly the end time!</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -43,11 +45,11 @@
         <option value="$PROJECT_DIR$/server/app/lib/config.php" />
         <option value="$PROJECT_DIR$/server/api/events/index.php" />
         <option value="$PROJECT_DIR$/server/app/models/ModelDB.php" />
-        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
         <option value="$PROJECT_DIR$/client/api/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/events/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/rooms/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/users/.htaccess" />
+        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
       </list>
     </option>
   </component>
@@ -79,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -94,6 +95,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -244,11 +246,12 @@
       <workItem from="1509999072268" duration="265000" />
       <workItem from="1509999877347" duration="8909000" />
       <workItem from="1510050479647" duration="9331000" />
+      <workItem from="1510085616877" duration="5582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109729000" />
+    <option name="totallyTimeSpent" value="115311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -549,54 +552,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/lib/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="52" column="90" lean-forward="false" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/users/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="65" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="206" column="23" lean-forward="true" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
-          <folding>
-            <marker date="1510062708823" expanded="true" signature="3032:3215" ph="INSERT INTO events... " />
-            <marker date="1510062708823" expanded="true" signature="4978:5193" ph="INSERT INTO events... " />
-            <marker date="1510062708823" expanded="true" signature="6514:6542" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="6907:6935" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="6907:6956" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="6907:6957" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="7271:7321" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="7271:7353" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="7271:7354" ph="DELETE FROM " />
-            <marker date="1510062708823" expanded="true" signature="8502:8519" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8552" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8557" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8572" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8573" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8612" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8623" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8624" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8661" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8662" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8672" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8673" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8713" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8714" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8822" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8826" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8827" ph="UPDATE event... " />
-            <marker date="1510062708823" expanded="true" signature="8502:8981" ph="UPDATE event... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,9 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="87" column="61" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="61" />
-          <folding>
-            <marker date="1510055220242" expanded="true" signature="1118:1219" ph="SELECT r.nam... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,26 +599,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="3213">
+          <caret line="207" column="5" lean-forward="false" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
+          <folding>
+            <marker date="1510089612490" expanded="true" signature="3021:3200" ph="INSERT INTO events... " />
+            <marker date="1510089612490" expanded="true" signature="4908:5123" ph="INSERT INTO events... " />
+            <marker date="1510089612490" expanded="true" signature="6429:6457" ph="DELETE FROM " />
+            <marker date="1510089612490" expanded="true" signature="6893:6964" ph="DELETE FROM " />
+            <marker date="1510089612490" expanded="true" signature="7359:7485" ph="DELETE FROM " />
+            <marker date="1510089612490" expanded="true" signature="8857:9205" ph="UPDATE event... " />
+            <marker date="1510089612490" expanded="true" signature="10744:11068" ph="UPDATE event... " />
+            <marker date="1510089612490" expanded="true" signature="10744:11123" ph="UPDATE event... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/events/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -669,7 +627,31 @@
     <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
           <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/lib/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="48" column="109" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="109" />
           <folding />
         </state>
       </provider>
