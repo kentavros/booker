@@ -76,7 +76,7 @@ class RestServer
             //Cut extension
             $data = explode('/', $data);
             if (count($data) % 2) {
-                //NE4etnoe
+                //Odd values
                 $id = (int)$data[count($data) - 1];
                 $data = [];
                 $data['id'] = $id;
@@ -85,7 +85,7 @@ class RestServer
                     $data = false;
                 }
             } else {
-                //4etnoe
+                //Even value
                 $arrEven = [];
                 $arrOdd = [];
                 foreach ($data as $key => $val) {
@@ -103,7 +103,6 @@ class RestServer
         elseif ($this->reqMethod == 'POST') 
         {
             $this->data = $_POST;
-//            file_put_contents('tempp.txt', print_r($_POST, true));
             return $this->data;
         }
         elseif ($this->reqMethod == 'PUT')

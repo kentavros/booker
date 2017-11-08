@@ -27,5 +27,4 @@ class ModelRooms extends ModelDB
             return ERR_ACCESS;
         }
     }
-
 }

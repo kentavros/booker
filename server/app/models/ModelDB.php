@@ -65,7 +65,6 @@ class ModelDB
 
     protected function checkEvent($param)
     {
-        //dump($param);
         //IF Add
         $dateStart = new DateTime();
         $dateEnd = new DateTime();
@@ -86,14 +85,11 @@ class ModelDB
         //IF update
         if (!empty($param['event_id']))
         {
-            //dump($param);
             $idEvent = $this->pdo->quote($param['event_id']);
             $sql .= ' AND id !='.$idEvent;
-           // dump($sql);
         }
 
         $data = $this->selectQuery($sql);
-        //dump($data);
         if (!is_array($data))
         {
             return true;

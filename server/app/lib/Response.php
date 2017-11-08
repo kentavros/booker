@@ -42,7 +42,6 @@ class Response
     public function serverSuccess($type, $msg=null)
     {
         $responseHeader = $this->serverOKType();
-        //header('Access-Control-Allow-Origin: *');
         header($responseHeader[$type]);
         return $msg;
     }
@@ -50,7 +49,6 @@ class Response
     public function serverError($errorType, $msg=null)
     {
         $responseHeader = $this->serverErrorType();
-        //header('Access-Control-Allow-Origin: *');
         header($responseHeader[$errorType]);
         return $msg;
     }
@@ -58,7 +56,6 @@ class Response
     public function clientError($errorType, $msg)
     {
         $responseHeader = $this->clientErrorType();
-        //header('Access-Control-Allow-Origin: *');
         header($responseHeader[$errorType]);
         return $msg;
     }

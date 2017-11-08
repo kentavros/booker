@@ -108,7 +108,6 @@ class ModelUsers extends ModelDB
     { 
         if ($this->checkData($param) == 'admin')
         {
-            //dump($param); 
             $validate = $this->validator->isValidateEdit($param);
             if ($validate === true)
             {

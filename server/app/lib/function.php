@@ -1,8 +1,8 @@
 <?php
+include 'config.php';
 /**
  * Autoload class function
  */
-include 'config.php';
 function __autoload($class)
 {
     $path = "../../app/lib/{$class}.php";
@@ -20,6 +20,10 @@ function __autoload($class)
     }
 }
 
+/**
+ * For my test application
+ * @param $data
+ */
 function dump($data)
 {
     echo '<pre>';

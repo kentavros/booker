@@ -72,6 +72,5 @@ class Events extends RestServer
             return $this->response->serverError(500, $exception->getMessage());
         }
     }
-
 }
 $events = new Events();

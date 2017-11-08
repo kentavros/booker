@@ -5,6 +5,11 @@
 date_default_timezone_set('Europe/Kiev');
 
 /**
+ * REST _ ENCODE DATA TYPE DEFAULT
+ */
+define('ENCODE_DEFAULT', '.json');
+
+/**
  * Set Weekend Day - Numeric representation of the day of the week
  * 0 (for Sunday) through 6 (for Saturday)
  */
@@ -18,10 +23,6 @@ define('WEEKEND2', 6);
 define('TIME_START', 8);
 define('TIME_END', 20);
 
-/**
- * ENCODE DATA TYPE DEFAULT
- */
-define('ENCODE_DEFAULT', '.json');
 
 /**
  * for Data Base MySQL
@@ -30,17 +31,15 @@ define('DSN_MY', 'mysql:host=localhost;dbname=user6');
 define('USER_NAME', 'user6');
 define('PASS', 'tuser6');
 define('TIME_FORMAT', 'Y-m-d H:i:s');
+
 /**
  * Errors
  */
 define('ERR_DB', 'Error connecting to DB');
 define('ERR_QUERY', 'Error query to DB');
 define('ERR_FIELDS', 'Error - some fields are empty!');
-//define('ERR_PAY', 'Field payment must be "cash" or "credit_card"');
 define('ERR_SEARCH', 'Nothing found');
 define('ERR_LOGIN', 'This login or email exists');
-//define('ERR_LOGIN_NAME', 'The login can consist only of letters of the English alphabet and numbers');
-//define('ERR_LOGIN_LEN', 'Login must be at least 3 characters and not more than 30');
 define('INVAL_USERNAME', 'Invalid User name - User Name must be at least 3 characters and not more than 35');
 define('INVAL_LOGIN', 'Wrong login - the login can consist only of letters of the English alphabet and numbers without spaces and must be at least 3 characters and not more than 30');
 define('INVAL_EMAIL', 'Invalid email format!');
@@ -52,18 +51,6 @@ define('INVAL_TIME_S_E', 'Your event is out of the acceptable time!');
 define('INVAL_RECURR', 'Invalid values for creating a recurring event');
 define('ERR_ADDEVENT', 'Your event intersects with another event! Check the date and time!');
 define('ERR_AUTH', 'Error, check password and login');
-//define('NO_ACTIVE', 'Your account has been deactivated, contact the site administration!');
-//define('ERR_COUNT', 'You did not specify the count of the desired book!');
 define('ERR_DATA', 'Error, Missing data!');
 define('ERR_ACCESS', 'Access denied!');
 define('ERR_A_DEL', 'Error, there must be at least one user with the role of admin!');
-//define('AUTHOR_EXIST', 'Author exists!');
-//define('ERR_DISC', 'Field "discount" should be float or integer');
-//define('ERR_PRICE', 'Field "pricet" should be float or integer and not "0"');
-//define('ERR_DISC_INC', 'Incorrect data of the discount field');
-
-/**
- * Success
- */
-//define('UPDATE', 'update');
-//define('QUERY_OK', 'All data received successfully!');

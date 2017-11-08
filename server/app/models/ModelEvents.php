@@ -44,8 +44,6 @@ class ModelEvents extends ModelDB
                 $idUserEvent = $this->pdo->quote($param['event_id_user']);
                 $sql .= ' WHERE (e.id='.$idEvent.' OR e.id_parent='.$idEvent.') AND e.time_start > NOW()'
                     .' AND e.id_user='.$idUserEvent;
-                //AND WHERE id_user = event.id_user
-                // dump($sql);
                 $data = $this->selectQuery($sql);
                 return $data;
             }
@@ -163,7 +161,6 @@ class ModelEvents extends ModelDB
         {
             if($param['checked'])
             {
-                //dump($param);
                 $result = $this->deleteRecurringEvents($param);
                 return $result;
             }
@@ -303,5 +300,4 @@ class ModelEvents extends ModelDB
         }
         return $arrErrors;
     }
-
 }
