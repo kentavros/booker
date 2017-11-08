@@ -289,7 +289,7 @@ class ModelEvents extends ModelDB
                 }
                 else
                 {
-                   $arrErrors[]= 'Date and time is reserved by another user: '.$dateS.' - '.$dateE;;
+                   $arrErrors[]= 'Date and time is already RESERVED: '.$dateS.' - '.$dateE;;
                 } 
             }
             else
