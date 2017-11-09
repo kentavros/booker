@@ -1,9 +1,14 @@
 <?php
 class ModelUsers extends ModelDB
 {
+    /**
+     * Get User or User list - accessby hash an id
+     * @param $param
+     * @return array|string
+     */
     public function getUsers($param)
     {
-        if ($this->checkData($param) == 'admin')
+        if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
         {
             unset($param['hash'], $param['id_user']);
             $sql = 'SELECT'
@@ -36,40 +41,6 @@ class ModelUsers extends ModelDB
             }
             $data = $this->selectQuery($sql);
             return $data;
-        }
-        //USER
-        else if ($this->checkData($param) == 'user')
-        {
-            unset($param['hash'], $param['id_user']);
-            $sql = 'SELECT'
-                .' u.id,'
-                .' r.name as role,'
-                .' u.id_role,'
-                .' u.login,'
-                .' u.email,'
-                .' u.hash,'
-                .' u.username'
-                .' FROM users u'
-                .' LEFT JOIN roles r'
-                .' ON u.id_role=r.id';
-            if (!empty($param))
-            {
-                if (is_array($param))
-                {
-                    $sql .= " WHERE ";
-                    foreach ($param as $key => $val)
-                    {
-                        $sql .= 'u.'.$key.'='.$this->pdo->quote($val).' AND ';
-                    }
-                    $sql = substr($sql, 0, -5);
-                    $data = $this->selectQuery($sql);
-                    return $data;
-                }
-            }
-            else
-            {
-                return ERR_DATA;
-            }
         }
         else
         {
@@ -226,6 +197,11 @@ class ModelUsers extends ModelDB
         return ERR_ACCESS;
     }
 
+    /**
+     * Get user role  by Id
+     * @param $id
+     * @return bool
+     */
     private function getRole($id)
     {
         $id = $this->pdo->quote($id);
@@ -243,7 +219,7 @@ class ModelUsers extends ModelDB
      * @param int $length
      * @return string
      */
-    public function generateHash($length=6)
+    private function generateHash($length=6)
     {
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHI JKLMNOPRQSTUVWXYZ0123456789";
         $code = "";

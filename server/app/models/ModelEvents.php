@@ -1,6 +1,11 @@
 <?php
 class ModelEvents extends ModelDB
 {
+    /**
+     * Get Events from DB
+     * @param $param
+     * @return array|string
+     */
     public function getEvents($param)
     {
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
@@ -27,6 +32,10 @@ class ModelEvents extends ModelDB
             {
                 unset($param['flag']);
                 $sql .= " WHERE ";
+                if (count($param) == 0)
+                {
+                    return false;
+                }
                 foreach ($param as $key => $val)
                 {
                     $sql .= $key.' LIKE '.$this->pdo->quote($val.'-%').' AND ';
@@ -54,6 +63,11 @@ class ModelEvents extends ModelDB
         }
     }
 
+    /**
+     * Adding an event - normal and recursive
+     * @param $param
+     * @return array|bool|int|string
+     */
     public function addEvents($param)
     {
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
@@ -97,6 +111,13 @@ class ModelEvents extends ModelDB
         }
     }
 
+    /**
+     * Adding event - recursive
+     * @param $param
+     * @param $dateStart
+     * @param $dateEnd
+     * @return array|bool
+     */
     private function addRecurringEvent($param, $dateStart, $dateEnd)
     {
         $arrErrors = [];
@@ -136,6 +157,11 @@ class ModelEvents extends ModelDB
         return $arrErrors;
     }
 
+    /**
+     * Get event's period - weekly, bi-weekly, monthly
+     * @param $recurring
+     * @return string
+     */
     private function getEventPeriod($recurring)
     {
         $period = '';
@@ -154,7 +180,11 @@ class ModelEvents extends ModelDB
         return $period;
     }
 
-
+    /**
+     * Delete Event's - normal and recursive
+     * @param $param
+     * @return bool|int|string
+     */
     public function deleteEvent($param)
     {
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
@@ -178,6 +208,11 @@ class ModelEvents extends ModelDB
         }
     }
 
+    /**
+     * Delete event's - recursive
+     * @param $param
+     * @return bool|int
+     */
     private function deleteRecurringEvents($param)
     {
         if ($param['id_parent'] == 'null')
@@ -201,6 +236,11 @@ class ModelEvents extends ModelDB
         }
     }
 
+    /**
+     * Edit events - normal and recursive
+     * @param $param
+     * @return array|bool|int|string
+     */
     public function editEvent($param)
     {
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user')
@@ -247,9 +287,14 @@ class ModelEvents extends ModelDB
         }
     }
 
+    /**
+     * Edit events recursive
+     * @param $param
+     * @param $timestamp
+     * @return array|bool|string
+     */
     private function editRecurringEvents($param, $timestamp)
     {
-
         $arrErrors = [];
         $timePoint = new DateTime();
         $timePoint->setTimestamp($timestamp/1000);

@@ -4,6 +4,11 @@ class ModelDB
     protected $pdo;
     protected $validator;
 
+    /**
+     * Create sql connection with PDO & set proporty validator
+     * ModelDB constructor.
+     * @throws Exception
+     */
     public function __construct()
     {
         $this->validator = new Validator();
@@ -14,6 +19,12 @@ class ModelDB
         }
     }
 
+    /**
+     * Get select from DB
+     * @param $sql
+     * @return array|string
+     * @throws Exception
+     */
     protected function selectQuery($sql)
     {
         $sth = $this->pdo->prepare($sql);
@@ -30,6 +41,11 @@ class ModelDB
         return $data;
     }
 
+    /**
+     * Get insert, update, delete from DB
+     * @param $sql
+     * @return bool|int
+     */
     protected function execQuery($sql)
     {
         $count = $this->pdo->exec($sql);
@@ -40,6 +56,12 @@ class ModelDB
         return $count;
     }
 
+    /**
+     * Checks in data sent hash and id_user
+     * for granting access
+     * @param $param
+     * @return bool
+     */
     protected function checkData($param)
     {
         if (isset($param['hash']) && isset($param['id_user']))
@@ -63,6 +85,11 @@ class ModelDB
         }
     }
 
+    /**
+     * Checks the existence of events in the given time frame
+     * @param $param
+     * @return bool
+     */
     protected function checkEvent($param)
     {
         //IF Add

@@ -1,6 +1,11 @@
 <?php
 class Validator
 {
+    /**
+     * Validation of registration form fields when adding a user
+     * @param $param
+     * @return bool|string
+     */
     public function isValidateRegistration($param)
     {
         if (!empty($param['username']) && !empty($param['login']) && !empty($param['email']) && !empty($param['pass']) && !empty($param['id_role']))
@@ -26,6 +31,11 @@ class Validator
         return ERR_FIELDS;
     }
 
+    /**
+     * Validate fields when editing user data
+     * @param $param
+     * @return bool|string
+     */
     public function isValidateEdit($param)
     {
         if (!empty($param['username']) && !empty($param['email']) && !empty($param['role']))
@@ -51,6 +61,11 @@ class Validator
         return ERR_FIELDS;
     }
 
+    /**
+     * Validation of adding events
+     * @param $param
+     * @return bool|string
+     */
     public function isValidEventAdd($param)
     {
         if (!empty($param['booked_for']) && !empty($param['dateTimeStart']) && !empty($param['dateTimeEnd']) && !empty($param['description']))
@@ -87,6 +102,11 @@ class Validator
         return ERR_FIELDS;
     }
 
+    /**
+     * Validation of the recursive method and the amount of recursion
+     * @param $param
+     * @return bool
+     */
     private function isValidRecurring($param)
     {
         if ($param['recurringMethod'] == 'weekly' || $param['recurringMethod'] == 'bi-weekly' || $param['recurringMethod'] == 'monthly')
@@ -122,7 +142,13 @@ class Validator
         return false;
     }
 
-
+    /**
+     * Validation time of the beginning and end of the event
+     * within the constants of the beginning and the end
+     * @param $start
+     * @param $end
+     * @return bool
+     */
     private function isValidTimeStEn($start, $end)
     {
         $start = date("G", $start/1000);
@@ -138,6 +164,11 @@ class Validator
 
     }
 
+    /**
+     * check the date $start of the day off or weekday
+     * @param $start
+     * @return bool
+     */
     public function isNoWeekend($start)
     {
         $start = date("w", $start/1000);
@@ -148,6 +179,12 @@ class Validator
         return true;
     }
 
+    /**
+     * Validation start time is no longer than the end time of an event
+     * @param $start
+     * @param $end
+     * @return bool
+     */
     private function isTStartNoMoreTEnd($start, $end)
     {
         if ($start < $end && $start != $end)
@@ -157,24 +194,39 @@ class Validator
         return false;
     }
 
+    /**
+     * Validate the number of characters in the field description
+     * @param $string
+     * @return bool
+     */
     private function isLengthDescr($string)
     {
-        if (!strlen($string) < 6)
+        if (strlen($string) > 6)
         {
             return true;
         }
         return false;
     }
 
+    /**
+     * Validate the number of characters in the field
+     * @param $userName
+     * @return bool
+     */
     private function isUserName($userName)
     {
-        if (strlen($userName) > 3 || strlen($userName) < 35)
+        if (strlen($userName) > 3 && strlen($userName) < 35)
         {
             return true;
         }
         return false;
     }
 
+    /**
+     * Validate the number of characters in the field and characters
+     * @param $login
+     * @return bool
+     */
     private function isLogin($login)
     {
         if (preg_match("/^[a-zA-Z0-9]{3,30}+$/",$login))
@@ -184,6 +236,11 @@ class Validator
         return false;
     }
 
+    /**
+     * Validate email format
+     * @param $email
+     * @return bool
+     */
     private function isEmail($email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -193,6 +250,11 @@ class Validator
         return false;
     }
 
+    /**
+     * Validate the number of characters in the field and characters
+     * @param $pass
+     * @return bool
+     */
     private function isPass($pass)
     {
         if (preg_match("/^[a-zA-Z0-9]{4,20}+$/",$pass))
