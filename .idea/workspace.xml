@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd3b08c6-dccb-4aac-859a-11835569902e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsersTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/lib/Response.php" afterPath="$PROJECT_DIR$/server/app/lib/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/lib/RestServer.php" afterPath="$PROJECT_DIR$/server/app/lib/RestServer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelEvents.php" afterPath="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelRooms.php" afterPath="$PROJECT_DIR$/server/app/models/ModelRooms.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelUsers.php" afterPath="$PROJECT_DIR$/server/app/models/ModelUsers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/api/.htaccess" afterPath="$PROJECT_DIR$/client/api/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/events/.htaccess" afterPath="$PROJECT_DIR$/server/api/events/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/rooms/.htaccess" afterPath="$PROJECT_DIR$/server/api/rooms/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/users/.htaccess" afterPath="$PROJECT_DIR$/server/api/users/.htaccess" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,10 +37,6 @@
         <option value="$PROJECT_DIR$/server/api/books/.htaccess" />
         <option value="$PROJECT_DIR$/readme" />
         <option value="$PROJECT_DIR$/server/api/users/index.php" />
-        <option value="$PROJECT_DIR$/client/api/.htaccess" />
-        <option value="$PROJECT_DIR$/server/api/events/.htaccess" />
-        <option value="$PROJECT_DIR$/server/api/rooms/.htaccess" />
-        <option value="$PROJECT_DIR$/server/api/users/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/events/index.php" />
         <option value="$PROJECT_DIR$/server/app/lib/config.php" />
         <option value="$PROJECT_DIR$/server/app/lib/function.php" />
@@ -64,6 +55,10 @@
         <option value="$PROJECT_DIR$/server/app/lib/RestServer.php" />
         <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
         <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
+        <option value="$PROJECT_DIR$/client/api/.htaccess" />
+        <option value="$PROJECT_DIR$/server/api/events/.htaccess" />
+        <option value="$PROJECT_DIR$/server/api/rooms/.htaccess" />
+        <option value="$PROJECT_DIR$/server/api/users/.htaccess" />
       </list>
     </option>
   </component>
@@ -262,12 +257,12 @@
       <workItem from="1510050479647" duration="9331000" />
       <workItem from="1510085616877" duration="5582000" />
       <workItem from="1510146086526" duration="780000" />
-      <workItem from="1510171606344" duration="35382000" />
+      <workItem from="1510171606344" duration="36172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151473000" />
+    <option name="totallyTimeSpent" value="152263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -487,38 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/events/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsersTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-833">
@@ -552,25 +515,6 @@
             <marker date="1510208966192" expanded="true" signature="8732:8759" ph="DELETE FROM " />
             <marker date="1510208966192" expanded="true" signature="8908:9058" ph="INSERT INTO users... " />
             <marker date="1510208966192" expanded="true" signature="9371:9398" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-          <folding>
-            <marker date="1510209804891" expanded="true" signature="649:798" ph="INSERT INTO users... " />
-            <marker date="1510209804891" expanded="true" signature="890:923" ph="INSERT INTO rooms... " />
-            <marker date="1510209804891" expanded="true" signature="890:924" ph="INSERT INTO rooms... " />
-            <marker date="1510209804891" expanded="true" signature="890:940" ph="INSERT INTO rooms... " />
-            <marker date="1510209804891" expanded="true" signature="1257:1284" ph="DELETE FROM " />
-            <marker date="1510209804891" expanded="true" signature="1328:1355" ph="DELETE FROM " />
-            <marker date="1510209804891" expanded="true" signature="1456:1605" ph="INSERT INTO users... " />
-            <marker date="1510209804891" expanded="true" signature="1697:1747" ph="INSERT INTO rooms... " />
-            <marker date="1510209804891" expanded="true" signature="2093:2120" ph="DELETE FROM " />
-            <marker date="1510209804891" expanded="true" signature="2164:2191" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -761,6 +705,57 @@
             <marker date="1510212029979" expanded="true" signature="11687:12011" ph="UPDATE event... " />
             <marker date="1510212029979" expanded="true" signature="11687:12066" ph="UPDATE event... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <marker date="1510209804891" expanded="true" signature="649:798" ph="INSERT INTO users... " />
+            <marker date="1510209804891" expanded="true" signature="890:923" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="890:924" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="890:940" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="1257:1284" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="1328:1355" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="1456:1605" ph="INSERT INTO users... " />
+            <marker date="1510209804891" expanded="true" signature="1697:1747" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="2093:2120" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="2164:2191" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/events/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
