@@ -1,4 +1,10 @@
 <?php
+/**
+ * Class Response - interacts with the
+ * controller and sends the processed
+ * data from the model with a specific
+ * header
+ */
 class Response
 {
     /**
@@ -54,7 +60,7 @@ class Response
     /**
      * Server success response
      * @param $type
-     * @param null $msg
+     * @param null $msg | string
      * @return null
      */
     public function serverSuccess($type, $msg=null)
@@ -67,7 +73,7 @@ class Response
     /**
      * Server errors response
      * @param $errorType
-     * @param null $msg
+     * @param null $msg | string
      * @return null
      */
     public function serverError($errorType, $msg=null)
@@ -80,7 +86,7 @@ class Response
     /**
      * Client errors response
      * @param $errorType
-     * @param $msg
+     * @param $msg | string
      * @return mixed
      */
     public function clientError($errorType, $msg)

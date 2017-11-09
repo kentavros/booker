@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Class ModelRooms - model Rooms,
+ * works with controller Rooms.
+ * Receives data from the controller,
+ * works with its own table and returns
+ * data to its controller
+ */
 class ModelRooms extends ModelDB
 {
     /**

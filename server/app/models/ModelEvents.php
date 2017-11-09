@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Class ModelEvents - model Event,
+ * works with controller Events.
+ * Receives data from the controller,
+ * works with its own table and returns
+ * data to its controller
+ */
 class ModelEvents extends ModelDB
 {
     /**

@@ -1,4 +1,9 @@
 <?php
+/**
+ * The REST Controller - Users, provides access through requests:
+ * GET, POST, PUT, DELETE
+ * Accepts data, sends to the model, after processing returns
+ */
 include '../../app/lib/function.php';
 class Users extends RestServer
 {
@@ -17,6 +22,11 @@ class Users extends RestServer
         $this->run();
     }
 
+    /**
+     * Get the requested users, method - GET
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function getUsers($param)
     {
         try
@@ -31,6 +41,11 @@ class Users extends RestServer
         }
     }
 
+    /**
+     * Create (add) new users in DB, method - POST
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function postUsers($param)
     {
         try
@@ -45,6 +60,13 @@ class Users extends RestServer
         }
     }
 
+    /**
+     * Edit/Update events in DB,
+     * Get login users in app
+     * method - PUT
+     * @param $param | array
+     * @return $result | array - hash | string OR error
+     */
     public function putUsers($param)
     {
         try
@@ -65,6 +87,11 @@ class Users extends RestServer
         }
     }
 
+    /**
+     * Delete users in DB, method - DELETE
+     * @param $param | array
+     * @return $result | string OR error
+     */
     public function deleteUsers($param)
     {
         try

@@ -1,4 +1,9 @@
 <?php
+/**
+ * The REST Controller - Events, provides access through requests:
+ * GET, POST, PUT, DELETE
+ * Accepts data, sends to the model, after processing returns
+ */
 include '../../app/lib/function.php';
 class Events extends RestServer
 {
@@ -17,6 +22,11 @@ class Events extends RestServer
         $this->run();
     }
 
+    /**
+     * Get the requested events, method - GET
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function getEvents($param)
     {
         try
@@ -31,6 +41,11 @@ class Events extends RestServer
         }
     }
 
+    /**
+     * Create (add) new events in DB, method - POST
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function postEvents($param)
     {
         try
@@ -45,6 +60,11 @@ class Events extends RestServer
         }
     }
 
+    /**
+     * Edit/Update events in DB, method - PUT
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function putEvents($param)
     {
         try
@@ -59,6 +79,11 @@ class Events extends RestServer
         }
     }
 
+    /**
+     * Delete events in DB, method - DELETE
+     * @param $param | array
+     * @return $result | string OR error
+     */
     public function deleteEvents($param)
     {
         try

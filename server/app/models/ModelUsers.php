@@ -1,4 +1,11 @@
 <?php
+/**
+ * Class ModelUsers - model Users,
+ * works with controller Users.
+ * Receives data from the controller,
+ * works with its own table and returns
+ * data to its controller
+ */
 class ModelUsers extends ModelDB
 {
     /**

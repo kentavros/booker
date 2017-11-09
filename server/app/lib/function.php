@@ -21,7 +21,8 @@ function __autoload($class)
 }
 
 /**
- * For my test application
+ * For my test application, find sent param
+ * and error in app
  * @param $data
  */
 function dump($data)

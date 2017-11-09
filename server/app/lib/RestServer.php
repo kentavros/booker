@@ -1,4 +1,16 @@
 <?php
+/**
+ * Class RestServer - Accepts requests
+ * with data from client applications.
+ * Handles them. Checks the existence
+ * of a class, a method, depending on the
+ * existing method of sending the request,
+ * gets the passed parameters that passes
+ * to a certain class, the method for
+ * later processing - sets the class method.
+ * It is an inheritable class of all REST
+ * application controllers.
+ */
 class RestServer
 {
     protected $reqMethod;
@@ -9,7 +21,8 @@ class RestServer
 
     /**
      * Run - application entry point
-     * Set Method of the classes, request method ang getData sents
+     * Send headers, set Method of the classes,
+     * request method ang getData sents
      */
     protected function run()
     {    

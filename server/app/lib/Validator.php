@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Class Validator - Validates data sent
+ * by client applications to the  REST
+ * application
+ */
 class Validator
 {
     /**

@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Class ModelDB - Model Data Base,
+ * works with database tables MySQL.
+ * Create PDO, Validator object construct.
+ * It is an inheritable class of all REST application models.
+ */
 class ModelDB
 {
     protected $pdo;

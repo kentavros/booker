@@ -1,4 +1,9 @@
 <?php
+/**
+ * The REST Controller - Rooms, provides access through requests:
+ * GET
+ * Accepts data, sends to the model, after processing returns
+ */
 include '../../app/lib/function.php';
 class Rooms extends RestServer
 {
@@ -17,6 +22,11 @@ class Rooms extends RestServer
         $this->run();
     }
 
+    /**
+     * Get the requested rooms, method - GET
+     * @param $param | array
+     * @return $result | array | string OR error
+     */
     public function getRooms($param)
     {
         try
