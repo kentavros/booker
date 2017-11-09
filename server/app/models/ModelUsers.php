@@ -48,7 +48,11 @@ class ModelUsers extends ModelDB
         }
     }
 
-
+    /**
+     * Add User (Registered)
+     * @param $param
+     * @return bool|int|string
+     */
     public function addUser($param)
     {
         if ($this->checkData($param) == 'admin')
@@ -75,6 +79,11 @@ class ModelUsers extends ModelDB
         return ERR_ACCESS;
     }
 
+    /**
+     * Edit User information
+     * @param $param
+     * @return bool|int|string
+     */
     public function editUser($param)
     { 
         if ($this->checkData($param) == 'admin')
@@ -104,6 +113,11 @@ class ModelUsers extends ModelDB
         return ERR_ACCESS;
     }
 
+    /**
+     * Checked pass and login user if true generate hash and sent data
+     * @param $param
+     * @return array|string
+     */
     public function loginUser($param)
     {
         if (!empty($param['login']) && !empty($param['pass']))
@@ -143,11 +157,7 @@ class ModelUsers extends ModelDB
             }
             $hash = $this->pdo->quote(md5($this->generateHash(10)));
             $sql = 'UPDATE users SET hash='.$hash.' WHERE id='.$id;
-            $count = $this->execQuery($sql);
-            if ($count === false)
-            {
-                return ERR_QUERY;
-            }
+            $this->execQuery($sql);
             $id = trim($id, "'");
             $hash = trim($hash, "'");
             $login = trim($login, "'");
@@ -160,6 +170,12 @@ class ModelUsers extends ModelDB
         }
     }
 
+    /**
+     * Delete User from DB or Admin and his future events
+     * You can not remove the admin if it is left in the table last
+     * @param $param
+     * @return bool|int|string
+     */
     public function deleteUser($param)
     {
         if ($this->checkData($param) == 'admin')

@@ -1,6 +1,10 @@
 <?php
 class Response
 {
+    /**
+     * Client errors type
+     * @return array
+     */
     private function clientErrorType()
     {
         return array(
@@ -15,6 +19,10 @@ class Response
         );
     }
 
+    /**
+     * Server success type ok
+     * @return array
+     */
     private function serverOKType()
     {
         return array(
@@ -27,6 +35,10 @@ class Response
         );
     }
 
+    /**
+     * Server errors type
+     * @return array
+     */
     private function serverErrorType()
     {
         return array(
@@ -39,6 +51,12 @@ class Response
         );
     }
 
+    /**
+     * Server success response
+     * @param $type
+     * @param null $msg
+     * @return null
+     */
     public function serverSuccess($type, $msg=null)
     {
         $responseHeader = $this->serverOKType();
@@ -46,6 +64,12 @@ class Response
         return $msg;
     }
 
+    /**
+     * Server errors response
+     * @param $errorType
+     * @param null $msg
+     * @return null
+     */
     public function serverError($errorType, $msg=null)
     {
         $responseHeader = $this->serverErrorType();
@@ -53,6 +77,12 @@ class Response
         return $msg;
     }
 
+    /**
+     * Client errors response
+     * @param $errorType
+     * @param $msg
+     * @return mixed
+     */
     public function clientError($errorType, $msg)
     {
         $responseHeader = $this->clientErrorType();

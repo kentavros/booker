@@ -1,6 +1,11 @@
 <?php
 class ModelRooms extends ModelDB
 {
+    /**
+     * Get list All Rooms or By Param
+     * @param $param
+     * @return array|string
+     */
     public function getRooms($param)
     {
         if ($this->checkData($param) == 'admin' || $this->checkData($param) == 'user' )

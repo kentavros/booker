@@ -7,6 +7,10 @@ class RestServer
     protected $data;
     protected $encode = ENCODE_DEFAULT;
 
+    /**
+     * Run - application entry point
+     * Set Method of the classes, request method ang getData sents
+     */
     protected function run()
     {    
         $this->url = $_SERVER['REQUEST_URI'];
@@ -34,6 +38,11 @@ class RestServer
         }
     }
 
+    /**
+     * Checks the existence of a method that calls it
+     * @param $classMethod
+     * @param bool $data
+     */
     protected function setMethod($classMethod, $data=false)
     {
         if(method_exists($this, $classMethod))
@@ -47,6 +56,10 @@ class RestServer
         }
     }
 
+    /**
+     * Get class from url after /api/
+     * @return mixed
+     */
     protected function getClass()
     {
         //Cut for /api/
@@ -57,6 +70,10 @@ class RestServer
         return $this->class;
     }
 
+    /**
+     * Get data from request methods (GET, POST, PUT, DELETE)
+     * @return array|bool|mixed
+     */
     protected function getData()
     {
         if (($this->reqMethod == 'GET') || ($this->reqMethod == 'DELETE'))
@@ -114,6 +131,13 @@ class RestServer
         }
     }
 
+    /**
+     * Method Converting data into extensions
+     * .json, .txt, .xhtml, .xml
+     * ENCODE_DEFAULT - constant in config file (config.php)
+     * @param $data
+     * @return mixed|string
+     */
     protected function encodedData($data)
     {
         switch ($this->encode)
@@ -142,23 +166,28 @@ class RestServer
         }
     }
 
-    public function toXml($data, $xml)
+    /**
+     * Auxiliary method for data conversion to xml format
+     * @param $data
+     * @param $xml
+     */
+    private function toXml($data, $xml)
     {
-             foreach($data as $key=>$val)
-             {
-                if(is_numeric($key))
-                {
-                    $key = 'book'.$key;
-                }
-                if(is_array($val))
-                {
-                    $subnode = $xml->addChild($key);
-                    $this->toXml($val, $subnode);
-                }
-                else
-                {
-                    $xml->addChild("$key",htmlspecialchars("$val"));
-                }
-             }
+        foreach($data as $key=>$val)
+        {
+        if(is_numeric($key))
+        {
+            $key = 'book'.$key;
+        }
+        if(is_array($val))
+        {
+            $subnode = $xml->addChild($key);
+            $this->toXml($val, $subnode);
+        }
+        else
+        {
+            $xml->addChild("$key",htmlspecialchars("$val"));
+        }
+        }
     }
 }

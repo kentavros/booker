@@ -127,7 +127,7 @@ class ModelEventsTest extends PHPUnit_Framework_TestCase
             'id_room' => '1',
             'dateTimeStart' => $start,
             'dateTimeEnd' => $end,
-            'description' => 'test',
+            'description' => 'testtest',
         ]);
         $this->assertEquals(1, $result);
         $this->pdo->execQuery('DELETE FROM events WHERE id_user='.$id_user);
@@ -156,7 +156,7 @@ class ModelEventsTest extends PHPUnit_Framework_TestCase
             'id_room' => '1',
             'dateTimeStart' => $start,
             'dateTimeEnd' => $end,
-            'description' => 'test',
+            'description' => 'testtest',
             'recurringMethod' => 'weekly',
             'duration' => '4'
         ]);
@@ -189,7 +189,7 @@ class ModelEventsTest extends PHPUnit_Framework_TestCase
             'id_room' => '1',
             'dateTimeStart' => $start,
             'dateTimeEnd' => $end,
-            'description' => 'test',
+            'description' => 'testtest',
         ]);
         $this->assertEquals(ERR_ADDEVENT, $result);
         $this->pdo->execQuery('DELETE FROM events WHERE id_user='.$id_user);

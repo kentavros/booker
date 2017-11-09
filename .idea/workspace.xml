@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd3b08c6-dccb-4aac-859a-11835569902e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ValidatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsersTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/lib/Validator.php" afterPath="$PROJECT_DIR$/server/app/lib/Validator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelDB.php" afterPath="$PROJECT_DIR$/server/app/models/ModelDB.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" afterPath="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/lib/Response.php" afterPath="$PROJECT_DIR$/server/app/lib/Response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/lib/RestServer.php" afterPath="$PROJECT_DIR$/server/app/lib/RestServer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelEvents.php" afterPath="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelRooms.php" afterPath="$PROJECT_DIR$/server/app/models/ModelRooms.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/models/ModelUsers.php" afterPath="$PROJECT_DIR$/server/app/models/ModelUsers.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,127 +21,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ModelEventsTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="376" column="0" lean-forward="true" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
-              <folding>
-                <marker date="1510196412811" expanded="true" signature="1005:1075" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1005:1077" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1005:1124" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1005:1145" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1005:1154" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:1339" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:1353" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:1384" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:1398" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:1413" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1246:19107" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="1801:1829" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="1874:1901" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="2267:2416" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="2508:2675" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="3098:3126" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="3171:3198" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="3792:3941" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="4227:4254" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="4802:4951" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="5390:5423" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="5467:5494" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="6041:6190" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="6697:6730" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="6774:6801" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="7351:7500" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="7592:7803" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="8196:8229" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="8273:8300" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="8406:8555" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="8824:8851" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="9442:9591" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="9683:9850" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="10143:10170" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="11103:11252" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="11344:11495" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="11588:11754" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="11588:11769" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="11863:12044" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="12427:12445" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="12427:12455" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="12500:12527" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="13229:13378" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="13470:13621" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="13714:13895" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="13989:14170" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="14512:14539" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="15091:15240" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="15332:15543" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="16026:16054" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="16099:16126" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="16912:17061" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="17153:17348" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="17754:17935" ph="INSERT INTO events... " />
-                <marker date="1510196412811" expanded="true" signature="18433:18466" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="18510:18537" ph="DELETE FROM " />
-                <marker date="1510196412811" expanded="true" signature="18640:18789" ph="INSERT INTO users... " />
-                <marker date="1510196412811" expanded="true" signature="19060:19087" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelUsers.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/app/models/ModelUsers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding>
-                <marker date="1510202493569" expanded="true" signature="1988:2117" ph="INSERT INTO users... " />
-                <marker date="1510202493569" expanded="true" signature="4716:4757" ph="UPDATE users... " />
-                <marker date="1510202493569" expanded="true" signature="5581:5644" ph="DELETE FROM " />
-                <marker date="1510202493569" expanded="true" signature="5741:5768" ph="DELETE FROM " />
-                <marker date="1510202493569" expanded="true" signature="5978:6033" ph="SELECT count... " />
-                <marker date="1510202493569" expanded="true" signature="6275:6302" ph="DELETE FROM " />
-                <marker date="1510202493569" expanded="true" signature="6722:6804" ph="SELECT r.nam... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/lib/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Db.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/Db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="66" column="58" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="58" />
-              <folding>
-                <marker date="1510179687726" expanded="true" signature="1593:1694" ph="SELECT r.nam... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -160,7 +42,6 @@
         <option value="$PROJECT_DIR$/server/api/books/.htaccess" />
         <option value="$PROJECT_DIR$/readme" />
         <option value="$PROJECT_DIR$/server/api/users/index.php" />
-        <option value="$PROJECT_DIR$/server/api/rooms/index.php" />
         <option value="$PROJECT_DIR$/client/api/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/events/.htaccess" />
         <option value="$PROJECT_DIR$/server/api/rooms/.htaccess" />
@@ -168,16 +49,21 @@
         <option value="$PROJECT_DIR$/server/api/events/index.php" />
         <option value="$PROJECT_DIR$/server/app/lib/config.php" />
         <option value="$PROJECT_DIR$/server/app/lib/function.php" />
-        <option value="$PROJECT_DIR$/server/app/lib/Response.php" />
-        <option value="$PROJECT_DIR$/server/app/lib/RestServer.php" />
-        <option value="$PROJECT_DIR$/server/app/models/ModelRooms.php" />
         <option value="$PROJECT_DIR$/phpUnitTutorial/Test/Db.php" />
         <option value="$PROJECT_DIR$/server/app/models/ModelDB.php" />
-        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
-        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
         <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ValidatorTest.php" />
         <option value="$PROJECT_DIR$/server/app/lib/Validator.php" />
+        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsers.php" />
         <option value="$PROJECT_DIR$/server/app/models/ModelUsers.php" />
+        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsersTest.php" />
+        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelRooms.php" />
+        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php" />
+        <option value="$PROJECT_DIR$/server/app/models/ModelRooms.php" />
+        <option value="$PROJECT_DIR$/server/api/rooms/index.php" />
+        <option value="$PROJECT_DIR$/server/app/lib/Response.php" />
+        <option value="$PROJECT_DIR$/server/app/lib/RestServer.php" />
+        <option value="$PROJECT_DIR$/server/app/models/ModelEvents.php" />
+        <option value="$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php" />
       </list>
     </option>
   </component>
@@ -220,82 +106,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="booker" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpUnitTutorial" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,18 +262,17 @@
       <workItem from="1510050479647" duration="9331000" />
       <workItem from="1510085616877" duration="5582000" />
       <workItem from="1510146086526" duration="780000" />
-      <workItem from="1510171606344" duration="26739000" />
+      <workItem from="1510171606344" duration="35382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142830000" />
+    <option name="totallyTimeSpent" value="151473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -495,27 +304,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app/lib/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="90" lean-forward="false" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/rooms/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/users/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -683,6 +471,22 @@
     <entry file="file://$PROJECT_DIR$/server/api/books/.htaccess" />
     <entry file="file://$PROJECT_DIR$/server/app/models/ModelBooks.php" />
     <entry file="file://$PROJECT_DIR$/readme" />
+    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ValidatorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="237" column="34" lean-forward="false" selection-start-line="237" selection-start-column="34" selection-end-line="237" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/PHPUnit/Util/Fileloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/api/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -715,34 +519,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/events/index.php">
+    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelUsersTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="-833">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <marker date="1510208966192" expanded="true" signature="649:798" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="1115:1142" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="1238:1387" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="1733:1760" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="2085:2234" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="2693:2723" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="2693:2741" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="2776:2803" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="2913:3063" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="3530:3578" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="3904:4054" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="4453:4480" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="4584:4734" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="5163:5190" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="5516:5579" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="5516:5630" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="5516:5700" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="6025:6052" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="6636:6820" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="7093:7120" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="7225:7375" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="7467:7617" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="7908:7935" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="8049:8199" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="8291:8441" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="8732:8759" ph="DELETE FROM " />
+            <marker date="1510208966192" expanded="true" signature="8908:9058" ph="INSERT INTO users... " />
+            <marker date="1510208966192" expanded="true" signature="9371:9398" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelRoomsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <marker date="1510209804891" expanded="true" signature="649:798" ph="INSERT INTO users... " />
+            <marker date="1510209804891" expanded="true" signature="890:923" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="890:924" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="890:940" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="1257:1284" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="1328:1355" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="1456:1605" ph="INSERT INTO users... " />
+            <marker date="1510209804891" expanded="true" signature="1697:1747" ph="INSERT INTO rooms... " />
+            <marker date="1510209804891" expanded="true" signature="2093:2120" ph="DELETE FROM " />
+            <marker date="1510209804891" expanded="true" signature="2164:2191" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/rooms/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/users/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
+        <state relative-caret-position="867">
           <caret line="51" column="66" lean-forward="true" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/lib/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" column="51" lean-forward="false" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -755,64 +599,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/lib/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1090">
+          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/events/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/lib/RestServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="87" column="19" lean-forward="false" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+        <state relative-caret-position="291">
+          <caret line="179" column="31" lean-forward="true" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelRooms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1510177312356" expanded="true" signature="256:282" ph="SELECT id, n... rooms" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="66" column="58" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="58" />
-          <folding>
-            <marker date="1510179687726" expanded="true" signature="1593:1694" ph="SELECT r.nam... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="332" column="17" lean-forward="true" selection-start-line="332" selection-start-column="17" selection-end-line="332" selection-end-column="17" />
-          <folding>
-            <marker date="1510196772743" expanded="true" signature="3259:3438" ph="INSERT INTO events... " />
-            <marker date="1510196772743" expanded="true" signature="5289:5504" ph="INSERT INTO events... " />
-            <marker date="1510196772743" expanded="true" signature="7008:7036" ph="DELETE FROM " />
-            <marker date="1510196772743" expanded="true" signature="7567:7638" ph="DELETE FROM " />
-            <marker date="1510196772743" expanded="true" signature="8033:8159" ph="DELETE FROM " />
-            <marker date="1510196772743" expanded="true" signature="9647:9995" ph="UPDATE event... " />
-            <marker date="1510196772743" expanded="true" signature="11657:11981" ph="UPDATE event... " />
-            <marker date="1510196772743" expanded="true" signature="11657:12036" ph="UPDATE event... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/lib/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="227" column="36" lean-forward="true" selection-start-line="227" selection-start-column="36" selection-end-line="227" selection-end-column="36" />
+          <folding>
+            <marker date="1510208876014" expanded="true" signature="2084:2213" ph="INSERT INTO users... " />
+            <marker date="1510208876014" expanded="true" signature="5045:5086" ph="UPDATE users... " />
+            <marker date="1510208876014" expanded="true" signature="5999:6062" ph="DELETE FROM " />
+            <marker date="1510208876014" expanded="true" signature="6159:6186" ph="DELETE FROM " />
+            <marker date="1510208876014" expanded="true" signature="6396:6451" ph="SELECT count... " />
+            <marker date="1510208876014" expanded="true" signature="6693:6720" ph="DELETE FROM " />
+            <marker date="1510208876014" expanded="true" signature="7140:7222" ph="SELECT r.nam... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelRooms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <marker date="1510209845007" expanded="true" signature="359:385" ph="SELECT id, n... rooms" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,93 +665,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ValidatorTest.php">
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="237" column="34" lean-forward="false" selection-start-line="237" selection-start-column="34" selection-end-line="237" selection-end-column="34" />
+        <state relative-caret-position="867">
+          <caret line="66" column="58" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="58" />
+          <folding>
+            <marker date="1510179687726" expanded="true" signature="1593:1694" ph="SELECT r.nam... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phpUnitTutorial/Test/ModelEventsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="376" column="0" lean-forward="true" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
+        <state relative-caret-position="546">
+          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
           <folding>
-            <marker date="1510196412811" expanded="true" signature="1005:1075" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1005:1077" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1005:1124" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1005:1145" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1005:1154" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:1339" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:1353" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:1384" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:1398" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:1413" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1246:19107" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="1801:1829" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="1874:1901" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="2267:2416" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="2508:2675" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="3098:3126" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="3171:3198" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="3792:3941" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="4227:4254" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="4802:4951" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="5390:5423" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="5467:5494" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="6041:6190" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="6697:6730" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="6774:6801" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="7351:7500" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="7592:7803" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="8196:8229" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="8273:8300" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="8406:8555" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="8824:8851" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="9442:9591" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="9683:9850" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="10143:10170" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="11103:11252" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="11344:11495" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="11588:11754" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="11588:11769" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="11863:12044" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="12427:12445" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="12427:12455" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="12500:12527" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="13229:13378" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="13470:13621" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="13714:13895" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="13989:14170" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="14512:14539" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="15091:15240" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="15332:15543" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="16026:16054" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="16099:16126" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="16912:17061" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="17153:17348" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="17754:17935" ph="INSERT INTO events... " />
-            <marker date="1510196412811" expanded="true" signature="18433:18466" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="18510:18537" ph="DELETE FROM " />
-            <marker date="1510196412811" expanded="true" signature="18640:18789" ph="INSERT INTO users... " />
-            <marker date="1510196412811" expanded="true" signature="19060:19087" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="1005:1075" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1005:1077" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1005:1124" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1005:1145" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1005:1154" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1246:1339" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1246:1353" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1246:1384" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1246:1398" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1246:1413" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="1801:1829" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="1874:1901" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="2267:2416" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="2508:2675" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="3098:3126" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="3171:3198" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="3792:3941" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="4227:4254" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="4802:4951" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="5394:5427" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="5471:5498" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="6045:6194" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="6705:6738" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="6782:6809" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="7359:7508" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="7600:7811" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="8208:8241" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="8285:8312" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="8418:8567" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="8836:8863" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="9454:9603" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="9695:9862" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="10155:10182" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="11115:11264" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="11356:11507" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="11600:11781" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="11875:12056" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="12439:12467" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="12512:12539" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="13241:13390" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="13482:13633" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="13726:13907" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="14001:14182" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="14524:14551" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="15103:15252" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="15344:15555" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="16038:16066" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="16111:16138" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="16924:17073" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="17165:17360" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="17766:17947" ph="INSERT INTO events... " />
+            <marker date="1510213020322" expanded="true" signature="18445:18478" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="18522:18549" ph="DELETE FROM " />
+            <marker date="1510213020322" expanded="true" signature="18652:18801" ph="INSERT INTO users... " />
+            <marker date="1510213020322" expanded="true" signature="19072:19099" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/models/ModelUsers.php">
+    <entry file="file://$PROJECT_DIR$/server/app/models/ModelEvents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="-1054">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding>
-            <marker date="1510202493569" expanded="true" signature="1988:2117" ph="INSERT INTO users... " />
-            <marker date="1510202493569" expanded="true" signature="4716:4757" ph="UPDATE users... " />
-            <marker date="1510202493569" expanded="true" signature="5581:5644" ph="DELETE FROM " />
-            <marker date="1510202493569" expanded="true" signature="5741:5768" ph="DELETE FROM " />
-            <marker date="1510202493569" expanded="true" signature="5978:6033" ph="SELECT count... " />
-            <marker date="1510202493569" expanded="true" signature="6275:6302" ph="DELETE FROM " />
-            <marker date="1510202493569" expanded="true" signature="6722:6804" ph="SELECT r.nam... users" />
+            <marker date="1510212029979" expanded="true" signature="3289:3468" ph="INSERT INTO events... " />
+            <marker date="1510212029979" expanded="true" signature="5319:5534" ph="INSERT INTO events... " />
+            <marker date="1510212029979" expanded="true" signature="7038:7066" ph="DELETE FROM " />
+            <marker date="1510212029979" expanded="true" signature="7597:7668" ph="DELETE FROM " />
+            <marker date="1510212029979" expanded="true" signature="8063:8189" ph="DELETE FROM " />
+            <marker date="1510212029979" expanded="true" signature="9677:10025" ph="UPDATE event... " />
+            <marker date="1510212029979" expanded="true" signature="11687:12011" ph="UPDATE event... " />
+            <marker date="1510212029979" expanded="true" signature="11687:12066" ph="UPDATE event... " />
           </folding>
         </state>
       </provider>

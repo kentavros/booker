@@ -3,6 +3,7 @@ class ModelEvents extends ModelDB
 {
     /**
      * Get Events from DB
+     * Access - admin or user
      * @param $param
      * @return array|string
      */
